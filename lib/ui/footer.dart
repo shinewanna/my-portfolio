@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myporfolio/model/project.dart';
+import 'package:myporfolio/utils/app_utils.dart';
 import 'package:myporfolio/utils/my_info.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -10,14 +10,11 @@ import 'icon.dart';
 class Footer extends StatelessWidget {
   final String _getInTouch =
       "You have an idea, I am here to turn your dream into real digital solution.";
-  final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
 
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      desktop: Container(
-        color: Colors.black,
+      desktop: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * .15,
           vertical: 30,
@@ -37,23 +34,17 @@ class Footer extends StatelessWidget {
                           Container(
                             width: 2,
                             height: 20,
-                            color: AppColors.yellow,
+                            color: AppColors.primary,
                           ),
                           const SizedBox(width: 7.5),
-                          Text(
-                            'GET IN TOUCH',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          )
+                          AppUtil.withSubtitleStyle('GET IN TOUCH'),
                         ],
                       ),
                       const SizedBox(height: 20),
                       Text(
                         _getInTouch,
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontSize: 13,
                         ),
                       ),
@@ -61,7 +52,7 @@ class Footer extends StatelessWidget {
                       Text(
                         'Email Address',
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
@@ -69,7 +60,7 @@ class Footer extends StatelessWidget {
                       Text(
                         AppConstants.mail,
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontSize: 13,
                         ),
                       ),
@@ -77,7 +68,7 @@ class Footer extends StatelessWidget {
                       Text(
                         'Phone Number',
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
@@ -85,7 +76,7 @@ class Footer extends StatelessWidget {
                       Text(
                         AppConstants.phone,
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontSize: 13,
                         ),
                       ),
@@ -93,7 +84,7 @@ class Footer extends StatelessWidget {
                       Text(
                         'Location',
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
@@ -101,7 +92,7 @@ class Footer extends StatelessWidget {
                       Text(
                         AppConstants.location,
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontSize: 13,
                         ),
                       )
@@ -119,23 +110,17 @@ class Footer extends StatelessWidget {
                           Container(
                             width: 2,
                             height: 20,
-                            color: AppColors.yellow,
+                            color: AppColors.primary,
                           ),
                           const SizedBox(width: 7.5),
-                          Text(
-                            'ABOUT ME',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          )
+                          AppUtil.withSubtitleStyle('ABOUT ME'),
                         ],
                       ),
                       const SizedBox(height: 20),
                       Text(
-                        _description,
+                        myInfo.aboutMe,
                         style: TextStyle(
-                          color: AppColors.greyLight,
+                          color: AppColors.text,
                           fontSize: 13,
                         ),
                       ),
@@ -143,45 +128,11 @@ class Footer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 20),
-                // My projects
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 2,
-                            height: 20,
-                            color: AppColors.yellow,
-                          ),
-                          const SizedBox(width: 7.5),
-                          Text(
-                            'RECENT PROJECTS',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      Wrap(
-                        spacing: 10,
-                        runSpacing: 10,
-                        children: myInfo.projects
-                            .take(4)
-                            .map((p) => _buildProject(context, p))
-                            .toList(),
-                      )
-                    ],
-                  ),
-                ),
               ],
             ),
             const SizedBox(height: 30),
             Divider(
-              color: AppColors.greyLight.withOpacity(.75),
+              color: AppColors.text.withOpacity(.75),
               thickness: .5,
             ),
             const SizedBox(height: 20),
@@ -189,9 +140,9 @@ class Footer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Proudly powered by OuahidDev ©${DateTime.now().year}',
+                  'Proudly powered by Shine Wanna ©${DateTime.now().year}',
                   style: TextStyle(
-                    color: AppColors.greyLight.withOpacity(.75),
+                    color: AppColors.text.withOpacity(.75),
                   ),
                 ),
                 Row(children: _socialMedia()),
@@ -200,8 +151,7 @@ class Footer extends StatelessWidget {
           ],
         ),
       ),
-      mobile: Container(
-        color: Colors.black,
+      mobile: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * .15,
           vertical: 30,
@@ -216,23 +166,17 @@ class Footer extends StatelessWidget {
                     Container(
                       width: 2,
                       height: 20,
-                      color: AppColors.yellow,
+                      color: AppColors.primary,
                     ),
                     const SizedBox(width: 7.5),
-                    Text(
-                      'GET IN TOUCH',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
+                    AppUtil.withSubtitleStyle('GET IN TOUCH'),
                   ],
                 ),
                 const SizedBox(height: 20),
                 Text(
                   _getInTouch,
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontSize: 13,
                   ),
                 ),
@@ -240,7 +184,7 @@ class Footer extends StatelessWidget {
                 Text(
                   'Email Address',
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -248,7 +192,7 @@ class Footer extends StatelessWidget {
                 Text(
                   AppConstants.mail,
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontSize: 13,
                   ),
                 ),
@@ -256,7 +200,7 @@ class Footer extends StatelessWidget {
                 Text(
                   'Phone Number',
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -264,7 +208,7 @@ class Footer extends StatelessWidget {
                 Text(
                   AppConstants.phone,
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontSize: 13,
                   ),
                 ),
@@ -272,7 +216,7 @@ class Footer extends StatelessWidget {
                 Text(
                   'Location',
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -280,7 +224,7 @@ class Footer extends StatelessWidget {
                 Text(
                   AppConstants.location,
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontSize: 13,
                   ),
                 )
@@ -296,64 +240,26 @@ class Footer extends StatelessWidget {
                     Container(
                       width: 2,
                       height: 20,
-                      color: AppColors.yellow,
+                      color: AppColors.primary,
                     ),
                     const SizedBox(width: 7.5),
-                    Text(
-                      'ABOUT ME',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
+                    AppUtil.withSubtitleStyle('ABOUT ME'),
                   ],
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  _description,
+                  myInfo.aboutMe,
                   style: TextStyle(
-                    color: AppColors.greyLight,
+                    color: AppColors.text,
                     fontSize: 13,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 30),
-            // My projects
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 2,
-                      height: 20,
-                      color: AppColors.yellow,
-                    ),
-                    const SizedBox(width: 7.5),
-                    Text(
-                      'RECENT PROJECTS',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Wrap(
-                  spacing: 10,
-                  runSpacing: 10,
-                  children: myInfo.projects
-                      .take(4)
-                      .map((p) => _buildProject(context, p))
-                      .toList(),
-                )
-              ],
-            ),
+
             const SizedBox(height: 30),
             Divider(
-              color: AppColors.greyLight.withOpacity(.75),
+              color: AppColors.text.withOpacity(.75),
               thickness: .5,
             ),
             const SizedBox(height: 20),
@@ -365,9 +271,9 @@ class Footer extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'Proudly powered by OuahidDev ©${DateTime.now().year}',
+              'Proudly powered by Shine Wanna ©${DateTime.now().year}',
               style: TextStyle(
-                color: AppColors.greyLight.withOpacity(.75),
+                color: AppColors.text.withOpacity(.75),
               ),
               textAlign: TextAlign.center,
             ),
@@ -377,55 +283,19 @@ class Footer extends StatelessWidget {
     );
   }
 
-  Widget _buildProject(BuildContext context, Project project) => InkWell(
-        onTap: () {
-          launch(project.url);
-        },
-        child: ScreenTypeLayout(
-          desktop: Container(
-            color: AppColors.greyLight,
-            padding: const EdgeInsets.all(15),
-            width: MediaQuery.of(context).size.width * .1,
-            height: MediaQuery.of(context).size.width * .1,
-            child: Image.asset(project.image),
-          ),
-          mobile: Container(
-            color: AppColors.greyLight,
-            padding: const EdgeInsets.all(15),
-            width: MediaQuery.of(context).size.width * .2,
-            height: MediaQuery.of(context).size.width * .2,
-            child: Image.asset(project.image),
-          ),
-        ),
-      );
-
   List<Widget> _socialMedia() => [
         InkWell(
           onTap: () async {
             launch(AppConstants.github);
           },
-          child: AppIcon('icons/github.png'),
-        ),
-        const SizedBox(width: 20),
-        InkWell(
-          onTap: () {
-            launch(AppConstants.linkedin);
-          },
-          child: AppIcon('icons/linkedin.png'),
-        ),
-        const SizedBox(width: 20),
-        InkWell(
-          onTap: () {
-            launch(AppConstants.twitter);
-          },
-          child: AppIcon('icons/twitter.png'),
+          child: AppIcon('asset/icons/github.png'),
         ),
         const SizedBox(width: 20),
         InkWell(
           onTap: () {
             launch(AppConstants.facebook);
           },
-          child: AppIcon('icons/facebook.png'),
+          child: AppIcon('asset/icons/facebook.png'),
         ),
       ];
 }

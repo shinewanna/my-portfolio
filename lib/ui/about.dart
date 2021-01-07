@@ -27,7 +27,7 @@ class About extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(1000),
                     child: Container(
-                      color: AppColors.greyLight,
+                      color: AppColors.text,
                       child: Image.asset(
                         _avatar,
                         width: 300,
@@ -44,7 +44,7 @@ class About extends StatelessWidget {
                         Text(
                           'ABOUT ME',
                           style: TextStyle(
-                            color: AppColors.yellow,
+                            color: AppColors.primary,
                             fontSize: 40,
                             fontWeight: FontWeight.bold,
                           ),
@@ -61,7 +61,7 @@ class About extends StatelessWidget {
                           children: [
                             RaisedButton(
                               onPressed: () {},
-                              color: AppColors.yellow,
+                              color: AppColors.primary,
                               textColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 20),
@@ -85,9 +85,9 @@ class About extends StatelessWidget {
               ),
               const SizedBox(height: 100),
               Text('MY SKILLS', style: AppStyles.title),
-              Container(width: 100, height: 2, color: AppColors.yellow),
+              Container(width: 100, height: 2, color: AppColors.primary),
               const SizedBox(height: 3),
-              Container(width: 75, height: 2, color: AppColors.yellow),
+              Container(width: 75, height: 2, color: AppColors.primary),
               const SizedBox(height: 50),
               Wrap(
                 spacing: 25,
@@ -109,7 +109,7 @@ class About extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(1000),
                 child: Container(
-                  color: AppColors.greyLight,
+                  color: AppColors.text,
                   child: Image.asset(
                     _avatar,
                     width: 150,
@@ -122,7 +122,7 @@ class About extends StatelessWidget {
               Text(
                 'ABOUT ME',
                 style: TextStyle(
-                  color: AppColors.yellow,
+                  color: AppColors.primary,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -138,7 +138,7 @@ class About extends StatelessWidget {
               const SizedBox(height: 30),
               RaisedButton(
                 onPressed: () {},
-                color: AppColors.yellow,
+                color: AppColors.primary,
                 textColor: Colors.white,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
@@ -155,9 +155,9 @@ class About extends StatelessWidget {
               ),
               const SizedBox(height: 50),
               Text('MY SKILLS', style: AppStyles.title),
-              Container(width: 75, height: 2, color: AppColors.yellow),
+              Container(width: 75, height: 2, color: AppColors.primary),
               const SizedBox(height: 3),
-              Container(width: 50, height: 2, color: AppColors.yellow),
+              Container(width: 50, height: 2, color: AppColors.primary),
               const SizedBox(height: 25),
               Wrap(
                 spacing: 10,

@@ -3,11 +3,7 @@ import 'package:myporfolio/service/cache_service.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 mixin AppColors {
-  static final yellow = Colors.yellow[800];
-
   static final black = Colors.black87;
-
-  static final greyLight = Colors.grey[100];  
 
   static final primary = Vx.purple500;
 

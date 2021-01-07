@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myporfolio/config/colors.dart';
 
 class AppIcon extends StatelessWidget {
   final String path;
@@ -13,7 +14,7 @@ class AppIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: background,
-      child: Image.asset(path, color: color, height: size, width: size),
+      child: Image.asset(path, color: AppColors.text,height: size, width: size),
     );
   }
 }

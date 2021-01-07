@@ -2,8 +2,15 @@ class Project {
   final String name;
   final String description;
   final String image;
-  final String url;
-  final List<String> skills;
+  final String playStore;
+  final String appStore;
+  final bool isFitHeight;
 
-  Project({this.name, this.description, this.image, this.url, this.skills});
+  Project(
+      {this.name,
+      this.description,
+      this.image,
+      this.playStore,
+      this.appStore,
+      this.isFitHeight = false});
 }

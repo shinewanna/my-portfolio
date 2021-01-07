@@ -1,3 +1,4 @@
+import 'package:myporfolio/model/acadamic_detail.dart';
 import 'package:myporfolio/model/exeprience.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/model/skill.dart';
@@ -5,10 +6,13 @@ import 'package:myporfolio/model/skill.dart';
 class MyInfo {
   String title = "I'm Shine Wanna, Flutter Developer from Yangon, Myanmar.";
   String objective =
-      "Objective Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+      "My advanced UI/UX, Animation, Error Handling, Readable and Maintainable coding skills can be utilized for making a quality product for customer satisfaction.My critical thinking and problem solving skills will amaze you.I was also participant of International Computer Programming Contest and we won First to Solve problem E and our position was 8 in final result.The sure one I can say, you must not regret about your selection.";
   String exp =
-      "Experientook a galley oftronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-
+      "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now.I have 1 year experience on Native Android with Java and 2.5 to 3 years experience with Flutter.";
+  String aboutMe =
+      "I have 1 year experience on Native Android with Java and 2.5 to 3 years experience with Flutter.";
+  AcadamicDetail acadamicDetail = AcadamicDetail(
+      name: "University of Computer Studies Yangon", degree: "B.C.Sc");
   List<Experience> exps;
   List<Project> projects;
   List<Skill> skills;
@@ -26,104 +30,123 @@ class MyInfo {
           place: "BizLeap Technology",
           fromTo: "Apr 2019 to July 2019"),
       Experience(
-          role: "Software Engineer",
+          role: "Flutter Developer",
           place: "Asaygo Company",
-          fromTo: "Apr 2019 to July 2019"),
+          fromTo: "Aug 2019 - Till Date"),
     ];
   }
 
   void _setSkills() {
     skills = [
-      Skill(name: 'Java'),
-      Skill(name: 'Kotlin'),
-      Skill(name: 'Dart'),
-      Skill(name: 'Php'),
-      Skill(name: 'Java Script'),
       Skill(name: 'Flutter'),
-      Skill(name: 'NodeJs'),
-      Skill(name: 'Laravel'),
+      Skill(name: 'Android'),
+      Skill(name: 'Java'),
+      Skill(name: 'Dart'),
       Skill(name: 'Git'),
+      Skill(name: 'Firebase'),
+      Skill(name: 'OneSignal'),
+      Skill(name: 'CodeMagic'),
+      Skill(name: 'Photoshop'),
+      Skill(name: 'Flare'),
+      Skill(name: 'MySql'),
+      Skill(name: 'Agora'),
+      Skill(name: 'Sentry'),
+      Skill(name: 'Final Cut Pro'),
+      Skill(name: 'WordPress'),
+      Skill(name: 'AWS(learning)'),
     ];
   }
 
   void _setProjects() {
     projects = [
       Project(
-        name: 'Omran',
+        name: 'ChoChoLay House',
         description:
-            'Developing a strategic plan that can lead the Muslim Ummah towards global competitiveness and can direct the efforts of qualified and skilled youth towards optimal utilization of planning and institutional tools to contribute to the renaissance of their communities and homeland countries.',
-        image: 'images/projects/omran.png',
-        url: 'https://play.google.com/store/apps/details?id=org.omran.android',
-        skills: [
-          'Dart',
-          'Java',
-          'Php',
-          'Sql',
-          'Flutter',
-          'OneSignal',
-          'Git',
-        ],
+            '''First of all,before reading the description,please use the application for User Experience. This is a ERP application. 
+            1.User can add which they want to sale and rent house,apartment,etc. 
+            2.User can easily search with Map. 
+            3.User can messaging each other. 
+            4.User can disable their own property. 
+            5.User can search their surrounding sale and rent houses
+            ''',
+        image: 'asset/projects/house.jpg',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.asaygo.ads',
+        appStore: 'https://apps.apple.com/us/app/chocholay-house/id1494552674',
       ),
       Project(
-        name: 'Topfood',
-        description: 'Food delivery app',
-        image: 'images/projects/topfood.png',
-        url:
-            'https://play.google.com/store/apps/details?id=dz.topfood.top_food_client',
-        skills: [
-          'Dart',
-          'Flutter',
-          'Git',
-        ],
+        name: 'ChoChoLay Zay',
+        description:
+            '''This is a ERP application.This project is to my junior for learning purposes and I'm developing,
+helping and guiding him to develop a professional application.This app is like OneKyat application,
+user can upload there items and search property what they want.''',
+        image: 'asset/projects/zay.jpg',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.chocholay.zay',
       ),
       Project(
-        name: 'Toptaxi',
+        name: 'ChoChoLay Chat',
         description:
-            'Toptaxi is a third party transportation service, which is intended to provide cars to its customers through a smart application whenever they request. The use of this application is free',
-        image: 'images/projects/toptaxi.png',
-        url: 'https://play.google.com/store/apps/details?id=toptaxi.dz',
-        skills: [
-          'Java',
-          'Php',
-          'JavaScript',
-          'Html',
-          'Css',
-          'Sql',
-          'Firebase',
-          'Laravel',
-          'OneSignal',
-          'Git',
-        ],
+            '''This is a chatting application like wechat appliction.There's many features.Voice call,video call,voice message,friend request and etc.And there's many organization that's you can join, chat and discuss about your business project.Use for social communicating, contant sharing, organization publishing.There's you can add member, add content, update your company detail, the other user will share your app and publish with there community.Business to business helping and managing with this application.''',
+        image: 'asset/projects/chat.jpg',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.chocholay.social',
+        appStore: 'https://apps.apple.com/us/app/chocholay-chat/id1502347910',
       ),
       Project(
-        name: 'Nataloe',
+        name: 'Lazy SMS',
         description:
-            'nataloe شركة جزائرية - إسبانية متخصصة بانتاج مستحضرات شبه صيدلانية للعناية اليومية بالبشرة اعتمادا على خلاصتي الألوفيرا والحلزون والزيوت الأساسية',
-        image: 'images/projects/nataloe.png',
-        url: 'https://play.google.com/store/apps/details?id=com.nataloe',
-        skills: [
-          'Kotlin',
-          'Php',
-          'JavaScript',
-          'Html',
-          'Css',
-          'Sql',
-          'Firebase',
-          'Laravel',
-          'Git',
-        ],
+            '''This is SMS scheduling app.Users can schedule their SMS at any time with their desire Sim Card.''',
+        image: 'asset/projects/lazy_sms.jpg',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.lazy.message',
       ),
       Project(
-        name: 'جداء',
+        name: 'Text Hider',
         description:
-            'يعتبر تعليم الطفل جدول الضرب من أصعب الأمور بالنسبة للأولياء وممل بالنسبة لطفل، لكن مع التطور التكنولوجي وحب الاطفال للتكنولوجيا أصبح ذلك من أيسر المهام على الأولياء والطفل على حد سواء ؛ تطبيق جداء يعتبر الحل الامثل لتعلم جدول الضرب خطوة بخطوة بطريقة سهلة وممتعة مع أصوات خاصة بالإجابة الصحيحة أوالخاطئة، أيضا التطبيق يعطيك تقييما لمستواك خلال التعلم تقييم لكل الجداول معا وتقييم خاص لكل جدول كما يمكنك التطبيق من إجراء إمتحان مباشر لتحديد المستوى ويقوم بحفظ كل نتائجك مع التقييم والتاريخ وبالتالي يمكنك الرجوع لها في أي وقت للإطلاع عليها وملاحظة مراحل تطورك مع الوقت.',
-        image: 'images/projects/juda.png',
-        url: 'https://play.google.com/store/apps/details?id=com.ouahiddev.juda',
-        skills: [
-          'Java',
-          'Sql',
-          'Git',
-        ],
+            '''You can encrypt your text like message and you can decrypt from the
+app.There are five catagories simple Ceasar Cipher's Encryption,Each Key Encryption,Prime
+Encryption,Perfect Square Encryption,Special Encryption.''',
+        image: 'asset/projects/text_hider.jpg',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.lazy.hasttext',
+      ),
+      Project(
+        name: 'CMTFDN',
+        description:
+            '''Tickets scanner for Social Organization Gathering Event.Entrance ticket holders can attend the
+event.Event workers will scan with the app to accepting the guests and leave report.
+''',
+        image: 'asset/projects/cmtfdn.jpg',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.asaygo.cmtfdn',
+        isFitHeight: true,
+      ),
+      Project(
+        name: 'Flare Bottom Navigation',
+        description:
+            '''Custom bottom navigation with animation using flare flutter.''',
+        image: 'asset/projects/flare_bottom_navigation.gif',
+      ),
+      Project(
+          name: 'Flare Characters',
+          description: '''Characters animation with flare flutter.''',
+          image: 'asset/projects/flare_character.gif'),
+      Project(
+        name: 'PixabayHD app',
+        description:
+            '''This is HD image downloader app.Users can search and download image from PixabayHD image downloader app.''',
+      ),
+      Project(
+        name: 'Food Order app',
+        description:
+            '''The food order app is to use for the restaurants.You can order,add new
+things,remove things.
+''',
+      ),
+      Project(
+        name: 'My Task app',
+        description: 'Use to note something.',
       ),
     ];
   }
