@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
+import 'package:myporfolio/config/colors.dart';
 
 mixin AppStyles {
-  static final TextStyle title = TextStyle(
-    fontSize: 35,
-    fontWeight: FontWeight.w700,
-    color: Vx.gray700
-  );
+  static get title => TextStyle(
+        fontSize: 35,
+        fontWeight: FontWeight.w700,
+        color: AppColors.text,
+      );
 
   static final TextStyle body = TextStyle(
     fontSize: 35,

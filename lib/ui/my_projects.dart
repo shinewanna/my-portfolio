@@ -61,22 +61,26 @@ class MyProjects extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   project.image.isEmptyOrNull
                       ? Nth()
-                      : Expanded(
+                      : Container(
                           child: SizedBox(
-                            height: MediaQuery.of(context).size.width * .3,
-                            child: GestureDetector(
-                              onTap: project.playStore.isEmptyOrNull
-                                  ? null
-                                  : () => launch(project.playStore),
-                              child: Image.asset(
-                                project.image,
-                                fit: project.isFitHeight
-                                    ? BoxFit.fitHeight
-                                    : null,
+                            height: MediaQuery.of(context).size.width * .25,
+                            width: 190,
+                            child: FittedBox(
+                              child: GestureDetector(
+                                onTap: project.playStore.isEmptyOrNull
+                                    ? null
+                                    : () => launch(project.playStore),
+                                child: Image.asset(
+                                  project.image,
+                                  filterQuality: FilterQuality.high,
+                                  fit: project.isFitHeight
+                                      ? BoxFit.fitHeight
+                                      : null,
+                                ).card.roundedSM.make(),
                               ),
                             ),
                           ),
@@ -125,8 +129,13 @@ class MyProjects extends StatelessWidget {
                   : SizedBox(
                       height: MediaQuery.of(context).size.width * .75,
                       child: GestureDetector(
-                          onTap: () => launch(project.playStore),
-                          child: Image.asset(project.image)),
+                        onTap: () => launch(project.playStore),
+                        child: Image.asset(
+                          project.image,
+                          filterQuality: FilterQuality.high,
+                          fit: project.isFitHeight ? BoxFit.fitHeight : null,
+                        ).card.roundedSM.elevation(0).make(),
+                      ),
                     ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),
               SizedBox(

@@ -129,9 +129,11 @@ event.Event workers will scan with the app to accepting the guests and leave rep
         image: 'asset/projects/flare_bottom_navigation.gif',
       ),
       Project(
-          name: 'Flare Characters',
-          description: '''Characters animation with flare flutter.''',
-          image: 'asset/projects/flare_character.gif'),
+        name: 'Flare Characters',
+        description: '''Characters animation with flare flutter.''',
+        image: 'asset/projects/flare_character.gif',
+        isFitHeight: true,
+      ),
       Project(
         name: 'PixabayHD app',
         description:

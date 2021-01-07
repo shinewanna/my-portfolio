@@ -1,8 +1,7 @@
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:myporfolio/config/colors.dart';
-import 'package:myporfolio/model/acadamic_detail.dart';
-import 'package:myporfolio/model/skill.dart';
 import 'package:myporfolio/service/cache_service.dart';
 import 'package:myporfolio/ui/about_me_text_view.dart';
 import 'package:myporfolio/ui/acadamic_exp_view.dart';
@@ -39,10 +38,12 @@ class Home extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    'asset/my_photo.jpg',
+                                    'asset/Icon-192.png',
                                     height: 200,
                                     width: 200,
-                                  ),
+                                    filterQuality: FilterQuality.low,
+                                    fit: BoxFit.cover,
+                                  ).card.make(),
                                   20.heightBox,
                                   AboutMeTextView(),
                                   AppUtil.withSubtitleStyle(myInfo.title),
@@ -101,10 +102,12 @@ class Home extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    'asset/my_photo.jpg',
+                                    'asset/Icon-192.png',
                                     height: 200,
                                     width: 200,
-                                  ),
+                                    filterQuality: FilterQuality.low,
+                                    fit: BoxFit.cover,
+                                  ).card.make(),
                                   20.heightBox,
                                   AboutMeTextView(),
                                   AppUtil.withSubtitleStyle(myInfo.title),

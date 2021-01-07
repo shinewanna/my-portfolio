@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myporfolio/config/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Header extends StatelessWidget {
@@ -9,9 +10,9 @@ class Header extends StatelessWidget {
         padding: const EdgeInsets.only(left: 25.0),
         child: Row(
           children: [
-            "Porfol".text.gray700.bold.xl3.make(),
-            "i".text.bold.purple500.xl3.make(),
-            "o".text.bold.pink300.xl3.make()
+            "Porfol".text.color(AppColors.text).bold.xl3.make(),
+            "i".text.bold.color(AppColors.primary).xl3.make(),
+            "o".text.bold.color(AppColors.secondary).xl3.make()
           ],
         ),
       ),

@@ -5,6 +5,7 @@ import 'package:mailto/mailto.dart';
 import 'package:myporfolio/utils/app_utils.dart';
 import 'package:myporfolio/widget/line_box_widget.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../config/constants.dart';
 import '../config/styles.dart';
@@ -142,20 +143,21 @@ class _ContactUsState extends State<ContactUs> {
             children: [
               Row(
                 children: [
-                  Expanded(
-                    child: TextFormField(
-                      validator: (text) {
-                        return (text.isValidName())
-                            ? null
-                            : 'Please insert valid name!';
-                      },
-                      decoration: InputDecoration(
-                        hintText: 'Your Name',
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 15),
+                  // Expanded(
+                  //   child: TextFormField(
+                  //     validator: (text) {
+                  //       return (text.isValidName())
+                  //           ? null
+                  //           : 'Please insert valid name!';
+                  //     },
+                  //     decoration: InputDecoration(
+                  //       hintText: 'Your Name',
+                  //       border: OutlineInputBorder(),
+                  //     ),
+                  //   ),
+                  // ),
+                  //  const SizedBox(width: 15),
+
                   Expanded(
                     child: TextFormField(
                       validator: (text) {
@@ -172,21 +174,26 @@ class _ContactUsState extends State<ContactUs> {
                 ],
               ),
               const SizedBox(height: 20),
-              TextFormField(
-                minLines: 3,
-                maxLines: 10,
-                validator: (text) {
-                  return (text.isValidName(minLength: 10))
-                      ? null
-                      : 'Please insert valid message!, at least 10 characters';
-                },
-                decoration: InputDecoration(
-                  hintText: 'Your Message',
-                  border: OutlineInputBorder(),
-                ),
-              ),
+              // TextFormField(
+              //   minLines: 3,
+              //   maxLines: 10,
+              //   validator: (text) {
+              //     return (text.isValidName(minLength: 10))
+              //         ? null
+              //         : 'Please insert valid message!, at least 10 characters';
+              //   },
+              //   decoration: InputDecoration(
+              //     hintText: 'Your Message',
+              //     border: OutlineInputBorder(),
+              //   ),
+              // ),
               const SizedBox(height: 20),
               RaisedButton(
+                elevation: 0,
+                hoverElevation: 0,
+                focusElevation: 0,
+                highlightElevation: 0,
+                hoverColor: AppColors.secondary,
                 color: AppColors.primary,
                 textColor: Colors.white,
                 padding:
@@ -210,17 +217,7 @@ class _ContactUsState extends State<ContactUs> {
       subject: _nameController.text.trim(),
       body: _contentController.text.trim(),
     );
-
-    final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 3000);
-    String renderHtml(Mailto mailto) =>
-        '''<html><head><title>mailto example</title></head><body><a href="$mailto">Open mail client</a></body></html>''';
-    await for (HttpRequest request in server) {
-      request.response
-        ..statusCode = HttpStatus.ok
-        ..headers.contentType = ContentType.html
-        ..write(renderHtml(mailto));
-      await request.response.close();
-    }
+    await launch('$mailto');
   }
 
   @override

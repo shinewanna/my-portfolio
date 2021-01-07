@@ -32,7 +32,7 @@ class StoreButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: AppUtil.withSubtitleStyle('Play Store'),
-              ),
+              ).box.make(),
         project.appStore.isEmptyOrNull
             ? Nth()
             : OutlineButton(
