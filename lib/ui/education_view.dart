@@ -11,7 +11,7 @@ class EducationView extends StatelessWidget {
       children: [
         AppStyle.subtitle("Education"),
         10.heightBox,
-        myInfo.acadamicDetail.name.text.tight.make(),
+        myInfo.acadamicDetail.name.selectableText.tight.make(),
         AppStyle.desc(myInfo.acadamicDetail.degree),
         20.heightBox,
       ],

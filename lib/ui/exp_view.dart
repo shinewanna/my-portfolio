@@ -16,7 +16,7 @@ class ExpView extends StatelessWidget {
                 children: [
                   AppStyle.subtitle(e.role),
                   3.heightBox,
-                  e.place.text.tight.make(),
+                  e.place.selectableText.tight.make(),
                   AppStyle.desc(e.fromTo),
                   20.heightBox
                 ],

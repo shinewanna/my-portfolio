@@ -17,13 +17,13 @@ class SkillView extends StatelessWidget {
           ),
         ),
         children: [
-          "What Skill I Have".text.xl.make(),
+          "What Skill I Have".selectableText.xl.make(),
           10.heightBox,
           Wrap(
             spacing: 8.0,
             runSpacing: 8.0,
             children:
-                myInfo.skills.map((e) => Chip(label: Text(e.name))).toList(),
+                myInfo.skills.map((e) => Chip(label: SelectableText(e.name))).toList(),
           )
         ],
       )),

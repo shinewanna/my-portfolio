@@ -23,8 +23,8 @@ class LanguageView extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          e.name.text.make(),
-                          "Proficient".text.make(),
+                          e.name.selectableText.make(),
+                          "Proficient".selectableText.make(),
                         ],
                       ),
                       LinearPercentIndicator(

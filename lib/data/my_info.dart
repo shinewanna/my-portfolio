@@ -65,7 +65,7 @@ class MyInfo {
 
   void _setLangs() {
     langs = [
-      Language(name: "Myanamar", proficiency: 1.0),
+      Language(name: "Burmese", proficiency: 1.0),
       Language(name: "English", proficiency: .7),
       Language(name: "Tamil", proficiency: .9),
     ];

@@ -3,14 +3,14 @@ import 'package:myporfolio/config/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 mixin AppStyle {
-  static Widget title(String value) => value.text
+  static Widget title(String value) => value.selectableText
       .size(35)
-      .fontWeight(FontWeight.w700)
+      .bold
       .color(AppColors.text)
       .make();
 
-  static Widget subtitle(String value) => value.text.xl.make();
+  static Widget subtitle(String value) => value.selectableText.xl.make();
 
   static Widget desc(String value) =>
-      value.text.lineHeight(1.5).color(AppColors.text).make();
+      value.selectableText.lineHeight(1.5).color(AppColors.text).make();
 }
