@@ -20,52 +20,36 @@ class StoreButton extends StatelessWidget {
       horPad = 10.0;
       verPad = 15.0;
     }
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        project.playStore.isEmptyOrNull
-            ? Nth()
-            : OutlineButton(
-                onPressed: () => launch(project.playStore),
-                color: AppColors.secondary,
-                borderSide: BorderSide(
-                  color: AppColors.secondary.withOpacity(.5),
-                  width: 5,
-                ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: horPad,
-                  vertical: verPad,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: deviceType == DeviceScreenType.mobile
-                    ? AppStyle.desc('Play Store')
-                    : AppStyle.subtitle('Play Store'),
-              ).box.make(),
-        project.appStore.isEmptyOrNull
-            ? Nth()
-            : OutlineButton(
-                onPressed: () {
-                  launch(project.appStore);
-                },
-                color: AppColors.primary,
-                borderSide: BorderSide(
-                  color: AppColors.primary.withOpacity(.5),
-                  width: 5,
-                ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: horPad,
-                  vertical: verPad,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: deviceType == DeviceScreenType.mobile
-                    ? AppStyle.desc('App Store')
-                    : AppStyle.subtitle('App Store'),
-              ),
-      ],
-    );
+
+    _buildButton(String url, String text, Color color) => url.isEmptyOrNull
+        ? Nth()
+        : OutlineButton(
+            onPressed: () => launch(url),
+            color: color,
+            borderSide: BorderSide(
+              color: color.withOpacity(.5),
+              width: 5,
+            ),
+            padding: EdgeInsets.symmetric(
+              horizontal: horPad,
+              vertical: verPad,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: deviceType == DeviceScreenType.mobile
+                ? AppStyle.desc(text, isSelectableText: false)
+                : AppStyle.subtitle(text, isSelectableText: false),
+          );
+    return project.url.isEmptyOrNull
+        ? Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _buildButton(
+                  project.playStore, 'Play Store', AppColors.secondary),
+              _buildButton(project.appStore, 'App Store', AppColors.primary),
+            ],
+          )
+        : _buildButton(project.url, 'Visit', AppColors.secondary);
   }
 }

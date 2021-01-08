@@ -4,6 +4,7 @@ class Project {
   final String image;
   final String playStore;
   final String appStore;
+  final String url;
   final bool isFitHeight;
 
   Project(
@@ -12,5 +13,6 @@ class Project {
       this.image,
       this.playStore,
       this.appStore,
+      this.url,
       this.isFitHeight = false});
 }

@@ -100,7 +100,7 @@ class MyProjects extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .01,
                         ),
-                        Text(project.description),
+                        AppStyle.desc(project.description),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .025,
                         ),
@@ -148,10 +148,7 @@ class MyProjects extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
-              Text(
-                project.description,
-                textAlign: TextAlign.start,
-              ),
+              AppStyle.desc(project.description),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .025,
               ),
