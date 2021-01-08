@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/ui/store_button.dart';
-import 'package:myporfolio/utils/app_utils.dart';
-import 'package:myporfolio/utils/my_info.dart';
+import 'package:myporfolio/data/my_info.dart';
 import 'package:myporfolio/widget/line_box_widget.dart';
 import 'package:myporfolio/widget/nth.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../config/styles.dart';
 import '../config/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -31,7 +30,6 @@ class MyProjects extends StatelessWidget {
       ),
       mobile: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * .15,
           vertical: 50,
         ),
         child: Column(
@@ -41,12 +39,17 @@ class MyProjects extends StatelessWidget {
               color: AppColors.secondary,
             ),
             const SizedBox(height: 50),
-            Wrap(
-              children: myInfo.projects
-                  .map((p) => _buildProject(context, p))
-                  .toList(),
-              spacing: 5,
-              runSpacing: 5,
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * .15,
+              ),
+              child: Wrap(
+                children: myInfo.projects
+                    .map((p) => _buildProject(context, p))
+                    .toList(),
+                spacing: 5,
+                runSpacing: 5,
+              ),
             ),
           ],
         ),
@@ -93,7 +96,7 @@ class MyProjects extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .01,
                         ),
-                        Text(project.name, style: AppStyles.title),
+                        AppStyle.title(project.name),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .01,
                         ),
@@ -113,7 +116,7 @@ class MyProjects extends StatelessWidget {
                 ],
               ),
               Divider(
-                color: AppColors.black.withOpacity(.1),
+                color: AppColors.text.withOpacity(.1),
                 height: 20,
                 thickness: 1,
               ),
@@ -141,13 +144,13 @@ class MyProjects extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
-              Text(project.name, style: AppStyles.title),
+              AppStyle.title(project.name),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
               Text(
                 project.description,
-                textAlign: TextAlign.justify,
+                textAlign: TextAlign.start,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .025,
@@ -159,7 +162,7 @@ class MyProjects extends StatelessWidget {
                 project: project,
               ),
               Divider(
-                color: AppColors.black.withOpacity(.1),
+                color: AppColors.text.withOpacity(.1),
                 height: 50,
                 thickness: 1,
               ),

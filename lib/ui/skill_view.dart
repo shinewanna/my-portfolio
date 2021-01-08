@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:myporfolio/utils/my_info.dart';
+import 'package:myporfolio/data/my_info.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SkillView extends StatelessWidget {

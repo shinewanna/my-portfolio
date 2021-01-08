@@ -1,17 +1,18 @@
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:myporfolio/config/colors.dart';
+import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/service/cache_service.dart';
 import 'package:myporfolio/ui/about_me_text_view.dart';
-import 'package:myporfolio/ui/acadamic_exp_view.dart';
-import 'package:myporfolio/ui/contact_us.dart';
+import 'package:myporfolio/ui/education_view.dart';
+import 'package:myporfolio/ui/exp_view.dart';
 import 'package:myporfolio/ui/footer.dart';
 import 'package:myporfolio/ui/header.dart';
+import 'package:myporfolio/ui/language_view.dart';
 import 'package:myporfolio/ui/my_projects.dart';
 import 'package:myporfolio/ui/skill_view.dart';
-import 'package:myporfolio/utils/app_utils.dart';
-import 'package:myporfolio/utils/my_info.dart';
+import 'package:myporfolio/data/my_info.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -41,27 +42,37 @@ class Home extends StatelessWidget {
                                     'asset/Icon-192.png',
                                     height: 200,
                                     width: 200,
-                                    filterQuality: FilterQuality.low,
                                     fit: BoxFit.cover,
                                   ).card.make(),
                                   20.heightBox,
                                   AboutMeTextView(),
-                                  AppUtil.withSubtitleStyle(myInfo.title),
+                                  AppStyle.subtitle(myInfo.title),
                                   10.heightBox,
-                                  AppUtil.withDescStyle(myInfo.objective),
+                                  AppStyle.desc(myInfo.objective),
                                   20.heightBox,
-                                  AppUtil.withSubtitleStyle("Experience"),
+                                  AppStyle.subtitle("Experience"),
                                   10.heightBox,
-                                  AppUtil.withDescStyle(myInfo.exp),
+                                  AppStyle.desc(myInfo.exp),
                                   20.heightBox,
                                   Row(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      AcadamicAndExpView(),
+                                      ExpView(),
                                       Expanded(child: SkillView()),
                                     ],
                                   ),
+                                  50.heightBox,
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      EducationView(),
+                                      50.widthBox,
+                                      LanguageView(),
+                                    ],
+                                  )
                                 ],
                               ),
                             ),
@@ -74,7 +85,6 @@ class Home extends StatelessWidget {
                           ],
                         ),
                         MyProjects(),
-                        ContactUs(),
                         Footer(),
                       ],
                     ),
@@ -105,28 +115,30 @@ class Home extends StatelessWidget {
                                     'asset/Icon-192.png',
                                     height: 200,
                                     width: 200,
-                                    filterQuality: FilterQuality.low,
                                     fit: BoxFit.cover,
                                   ).card.make(),
                                   20.heightBox,
                                   AboutMeTextView(),
-                                  AppUtil.withSubtitleStyle(myInfo.title),
+                                  AppStyle.subtitle(myInfo.title),
                                   10.heightBox,
-                                  AppUtil.withDescStyle(myInfo.objective),
+                                  AppStyle.desc(myInfo.objective),
                                   20.heightBox,
-                                  AppUtil.withSubtitleStyle("Experience"),
+                                  AppStyle.subtitle("Experience"),
                                   10.heightBox,
-                                  AppUtil.withDescStyle(myInfo.exp),
+                                  AppStyle.desc(myInfo.exp),
                                   20.heightBox,
-                                  AcadamicAndExpView(),
+                                  ExpView(),
                                   SkillView(),
+                                  30.heightBox,
+                                  EducationView(),
+                                  20.heightBox,
+                                  LanguageView(),
                                 ],
                               ),
                             ),
                           ],
                         ),
                         MyProjects(),
-                        ContactUs(),
                         Footer(),
                       ],
                     ),

@@ -17,11 +17,7 @@ class LineBoxWidget extends StatelessWidget {
             thickness: 3,
           ),
         ),
-        Text(title, style: AppStyles.title)
-            .box
-            .p12
-            .border(color: color, width: 3)
-            .make(),
+        AppStyle.title(title).box.p12.border(color: color, width: 3).make(),
         Expanded(
           child: Divider(
             color: color,

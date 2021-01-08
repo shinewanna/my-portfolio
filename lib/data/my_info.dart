@@ -1,5 +1,6 @@
 import 'package:myporfolio/model/acadamic_detail.dart';
 import 'package:myporfolio/model/exeprience.dart';
+import 'package:myporfolio/model/language.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/model/skill.dart';
 
@@ -11,15 +12,19 @@ class MyInfo {
       "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now.I have 1 year experience on Native Android with Java and 2.5 to 3 years experience with Flutter.";
   String aboutMe =
       "I have 1 year experience on Native Android with Java and 2.5 to 3 years experience with Flutter.";
+  String getInTouch =
+      "You have an idea, I am here to turn your dream into real digital solution.";
   AcadamicDetail acadamicDetail = AcadamicDetail(
       name: "University of Computer Studies Yangon", degree: "B.C.Sc");
   List<Experience> exps;
   List<Project> projects;
   List<Skill> skills;
+  List<Language> langs;
 
   MyInfo() {
     _setSkills();
     _setExps();
+    _setLangs();
     _setProjects();
   }
 
@@ -47,6 +52,7 @@ class MyInfo {
       Skill(name: 'OneSignal'),
       Skill(name: 'CodeMagic'),
       Skill(name: 'Photoshop'),
+      Skill(name: 'Adobe XD'),
       Skill(name: 'Flare'),
       Skill(name: 'MySql'),
       Skill(name: 'Agora'),
@@ -54,6 +60,14 @@ class MyInfo {
       Skill(name: 'Final Cut Pro'),
       Skill(name: 'WordPress'),
       Skill(name: 'AWS(learning)'),
+    ];
+  }
+
+  void _setLangs() {
+    langs = [
+      Language(name: "Myanamar", proficiency: 1.0),
+      Language(name: "English", proficiency: .7),
+      Language(name: "Tamil", proficiency: .9),
     ];
   }
 
