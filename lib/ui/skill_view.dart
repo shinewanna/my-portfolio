@@ -9,7 +9,7 @@ class SkillView extends StatelessWidget {
     return AnimationLimiter(
       child: Column(
           children: AnimationConfiguration.toStaggeredList(
-        duration: const Duration(seconds: 1),
+        duration: const Duration(milliseconds: 500),
         childAnimationBuilder: (widget) => SlideAnimation(
           verticalOffset: 50.0,
           child: FadeInAnimation(

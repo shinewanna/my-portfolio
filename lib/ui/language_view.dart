@@ -34,7 +34,7 @@ class LanguageView extends StatelessWidget {
                         backgroundColor: Colors.grey,
                         progressColor: AppColors.primary,
                         animation: true,
-                        animationDuration: 2500,
+                        animationDuration: 1000,
                       ),
                       10.heightBox,
                     ],
