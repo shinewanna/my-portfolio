@@ -23,6 +23,7 @@ class Home extends StatelessWidget {
       body: ScreenTypeLayout(
         desktop: Center(
           child: CustomScrollView(
+            physics: BouncingScrollPhysics(),
             slivers: [
               Header(),
               SliverPadding(

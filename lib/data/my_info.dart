@@ -59,6 +59,7 @@ class MyInfo {
       Skill(name: 'Sentry'),
       Skill(name: 'Final Cut Pro'),
       Skill(name: 'WordPress'),
+      Skill(name: 'OS(Mac, Windows, Linux)'),
       Skill(name: 'AWS(learning)'),
     ];
   }
