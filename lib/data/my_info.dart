@@ -59,6 +59,9 @@ class MyInfo {
       Skill(name: 'Sentry'),
       Skill(name: 'Final Cut Pro'),
       Skill(name: 'WordPress'),
+      Skill(name: 'Snappa(Cover Editor)'),
+      Skill(name: 'Appure'),
+      Skill(name: 'Adobe XD'),
       Skill(name: 'OS(Mac, Windows, Linux)'),
       Skill(name: 'AWS(learning)'),
     ];
