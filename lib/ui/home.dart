@@ -97,6 +97,7 @@ class Home extends StatelessWidget {
         ),
         mobile: Center(
           child: CustomScrollView(
+            physics: BouncingScrollPhysics(),
             slivers: [
               Header(),
               SliverPadding(
