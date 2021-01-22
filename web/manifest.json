@@ -1,11 +1,11 @@
 {
-    "name": "myporfolio",
-    "short_name": "myporfolio",
+    "name": "Shine Wanna",
+    "short_name": "Shine Wanna",
     "start_url": ".",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Shine Wanna's Portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
