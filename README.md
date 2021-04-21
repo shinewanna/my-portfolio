@@ -1,7 +1,7 @@
 # Flutter Web Portfolio
 
 Responsive Portfolio using Flutter web.
-* Live Link: [https://shinewanna.github.io/](https://shinewanna.github.io/)
+* Live Link: [https://shinewanna.github.io/portfolio/#/](https://shinewanna.github.io/portfolio/#/)
 
 ## Topics
 1.Objective
