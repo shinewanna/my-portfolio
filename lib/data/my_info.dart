@@ -9,9 +9,9 @@ class MyInfo {
   String objective =
       "My advanced UI/UX, Animation, Error Handling, Readable and Maintainable coding skills can be utilized for making a quality product for customer satisfaction.My critical thinking and problem solving skills will amaze you.I was also participant of International Computer Programming Contest and we won First to Solve problem E and our position was 8 in final result.The sure one I can say, you must not regret about your selection.";
   String exp =
-      "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now.I have 1 year experience on Native Android with Java and 2.5 to 3 years experience with Flutter.";
+      "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now.I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
   String aboutMe =
-      "I have 1 year experience on Native Android with Java and 2.5 to 3 years experience with Flutter.";
+      "I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
   String getInTouch =
       "You have an idea, I am here to turn your dream into real digital solution.";
   AcadamicDetail acadamicDetail = AcadamicDetail(
@@ -61,16 +61,19 @@ class MyInfo {
       Skill(name: 'WordPress'),
       Skill(name: 'Snappa'),
       Skill(name: 'Appure'),
-      Skill(name: 'Adobe XD'),
       Skill(name: 'OS(Mac, Windows, Linux)'),
-      Skill(name: 'AWS(learning)'),
+      Skill(name: 'AWS(Flutter)'),
+      Skill(name: 'HTML'),
+      Skill(name: 'CSS'),
+      Skill(name: 'C#'),
+      Skill(name: 'Swift(Learning)'),
     ];
   }
 
   void _setLangs() {
     langs = [
       Language(name: "Burmese", proficiency: 1.0),
-      Language(name: "English", proficiency: .7),
+      Language(name: "English", proficiency: .87),
       Language(name: "Tamil", proficiency: .9),
     ];
   }
@@ -78,64 +81,100 @@ class MyInfo {
   void _setProjects() {
     projects = [
       Project(
-        name: 'ChoChoLay House',
+        name: 'Share Notification',
         description:
-            '''First of all,before reading the description,please use the application for User Experience. This is a ERP application. 
-            1.User can add which they want to sale and rent house,apartment,etc. 
+            '''This app is to share any of installed apps and system apps notifications. Most people use for social media messge sharing (like Messenger, Twitter, Instagram, Tiktok, etc), for business (Banking) and Messaging, Incoming Call and others. Like hacking, you can sniff other notification messages in your device. The app doesn't show login information to user. So, feel free to try it.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132948581-497ba7d2-b283-49f8-9f38-e90c8c8cacfd.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.share.notification',
+        url: 'https://shinewanna.github.io/sharenotification/',
+      ),
+      Project(
+        name: 'ChoChoLay House',
+        description: '''This is real estate application. 
+            1.User can add which they want to sale and rent house, apartment, etc. 
             2.User can easily search with Map. 
             3.User can messaging each other. 
             4.User can disable their own property. 
             5.User can search their surrounding sale and rent houses
             ''',
-        image: 'asset/projects/house.jpg',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947364-fafc648b-71d4-4793-a79e-68b5c96c9d6f.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.asaygo.ads',
         appStore: 'https://apps.apple.com/us/app/chocholay-house/id1494552674',
       ),
       Project(
-        name: 'ChoChoLay Zay',
-        description:
-            '''This is a ERP application.This project is to my junior for learning purposes and I'm developing,
-helping and guiding him to develop a professional application.This app is like OneKyat application,
-user can upload there items and search property what they want.''',
-        image: 'asset/projects/zay.jpg',
-        playStore:
-            'https://play.google.com/store/apps/details?id=com.chocholay.zay',
-      ),
-      Project(
         name: 'ChoChoLay Chat',
         description:
-            '''This is a chatting application like wechat appliction.There's many features.Voice call,video call,voice message,friend request and etc.And there's many organization that's you can join, chat and discuss about your business project.Use for social communicating, contant sharing, organization publishing.There's you can add member, add content, update your company detail, the other user will share your app and publish with there community.Business to business helping and managing with this application.''',
-        image: 'asset/projects/chat.jpg',
+            '''This is a chatting application like wechat appliction. There's many features, such as Voice call, video call, voice message, friend request and etc. And there's many organization that's you can join, chat and discuss about your business project. Use for social communicating, contant sharing, organization publishing. There's you can add member, add content, update your company detail, the other user will share your app and publish with there community. Business to business helping and managing with this application.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947375-63b32cd7-7b49-471d-b314-5806f52552fd.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.chocholay.social',
         appStore: 'https://apps.apple.com/us/app/chocholay-chat/id1502347910',
       ),
       Project(
+        name: 'ChoChoLay Zay',
+        description:
+            '''This is a ERP application. This project is to my junior for learning purposes and I'm developing, helping and guiding him to develop a professional application. This app is like OneKyat application, user can upload there items and search property what they want.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947383-8d3cdd7c-2d41-489d-b59d-35245fba07bb.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.chocholay.zay',
+      ),
+      Project(
+        name: 'Second Space: Launcher',
+        description:
+            '''This app is for who willing hide their apps with second space feature but they don't have and for simple smooth Launcher users. Fast, lightweight and clean launcher for Android phones. Play with Wallpapers, Add Hide Apps, Change Hide App Design, Double Tap to Lock Screen and Try Second Space!!!.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132946754-5e50cf3f-2be4-4bce-83d1-70547d00a163.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.second.space',
+      ),
+      Project(
+        name: 'Debt Notes',
+        description:
+            '''You can easily serialize to your debts. Most of the people have debts to pay or get. So, I decided to make Debt Notes app, to save our time, to more readable, to more customizable our debt note.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132948578-2ca9cac6-e6b0-4515-8cb4-2ff43d012267.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.swn.debtnotes',
+      ),
+      Project(
         name: 'Lazy SMS',
         description:
-            '''This is SMS scheduling app.Users can schedule their SMS at any time with their desire Sim Card.''',
-        image: 'asset/projects/lazy_sms.jpg',
+            '''This is SMS scheduling app. Users can schedule their SMS at any time with their desire Sim Card.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947380-c1955f89-14f5-44e2-92a3-ed8129f458fe.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.lazy.message',
       ),
       Project(
         name: 'Text Hider',
         description:
-            '''You can encrypt your text like message and you can decrypt from the
-app.There are five catagories simple Ceasar Cipher's Encryption,Each Key Encryption,Prime
-Encryption,Perfect Square Encryption,Special Encryption.''',
-        image: 'asset/projects/text_hider.jpg',
+            '''You can encrypt your text like message and you can decrypt from the app. There are five catagories simple Ceasar Cipher's Encryption, Each Key Encryption, Prime Encryption, Perfect Square Encryption, Special Encryption.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947382-1f894bc5-c678-4310-8f74-25f577af7683.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.lazy.hasttext',
       ),
       Project(
+        name: 'Annoy Notification',
+        description:
+            '''It's a virus app. It's to annoy your friends with funny notifications. Recommended not to try it.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132950615-75f3c946-b5b8-4d01-8671-d46c550b3083.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.swn.creepy',
+      ),
+      Project(
         name: 'CMTFDN',
         description:
-            '''Tickets scanner for Social Organization Gathering Event.Entrance ticket holders can attend the
-event.Event workers will scan with the app to accepting the guests and leave report.
-''',
-        image: 'asset/projects/cmtfdn.jpg',
+            '''Tickets scanner for Social Organization Gathering Event. Entrance ticket holders can attend the event. Event workers will scan with the app to accepting the guests and leave report.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947377-c18f1003-ba57-46e4-99d6-23957f45dba9.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.asaygo.cmtfdn',
         isFitHeight: true,
@@ -144,25 +183,25 @@ event.Event workers will scan with the app to accepting the guests and leave rep
         name: 'Flare Bottom Navigation',
         description:
             '''Custom bottom navigation with animation using flare flutter.''',
-        image: 'asset/projects/flare_bottom_navigation.gif',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947724-9937d083-9627-4f72-bef1-59ead96310bb.gif',
       ),
       Project(
         name: 'Flare Characters',
         description: '''Characters animation with flare flutter.''',
-        image: 'asset/projects/flare_character.gif',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947727-199e5fab-1673-44b0-adc2-66a1b6ee4fb3.gif',
         isFitHeight: true,
       ),
       Project(
         name: 'PixabayHD app',
         description:
-            '''This is HD image downloader app.Users can search and download image from PixabayHD image downloader app.''',
+            '''This is HD image downloader app. Users can search and download image from PixabayHD image downloader app.''',
       ),
       Project(
         name: 'Food Order app',
         description:
-            '''The food order app is to use for the restaurants.You can order,add new
-things,remove things.
-''',
+            '''The food order app is to use for the restaurants. You can order, add new things, remove things.''',
       ),
       Project(
         name: 'My Task app',
@@ -171,7 +210,7 @@ things,remove things.
       Project(
         name: 'Background SMS',
         description:
-            'This is an SMS library for flutter on Pub.dev.You can send SMS from foreground, background, and headless.',
+            'This is an SMS library for flutter on Pub.dev. You can send SMS from foreground, background, and headless.',
         url: 'https://pub.dev/packages/background_sms',
       ),
       Project(
@@ -182,7 +221,7 @@ things,remove things.
       Project(
         name: 'Android AutoStart',
         description:
-            '''This is an AutoStart library for flutter.You can request to enable AutoStart with Android AutoStart.Many Developers need to access AutoStart Setting in Flutter including me, but there's no good plugin yet for autostart.So I decided to make AutoStart Plugin for Developers.''',
+            '''This is an AutoStart library for flutter. You can request to enable AutoStart with Android AutoStart. Many Developers need to access AutoStart Setting in Flutter including me, but there's no good plugin yet for autostart. So I decided to make AutoStart Plugin for Developers.''',
         url: 'https://pub.dev/packages/android_autostart',
       ),
     ];

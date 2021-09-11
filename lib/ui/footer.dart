@@ -249,14 +249,14 @@ class Footer extends StatelessWidget {
           onTap: () async {
             launch(AppConstants.github);
           },
-          child: AppIcon('asset/icons/github.png'),
+          child: AppIcon(AppConstants.githubImage),
         ),
         const SizedBox(width: 20),
         InkWell(
           onTap: () {
             launch(AppConstants.facebook);
           },
-          child: AppIcon('asset/icons/facebook.png'),
+          child: AppIcon(AppConstants.facebookImage),
         ),
       ];
 }

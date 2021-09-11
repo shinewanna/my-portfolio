@@ -7,6 +7,7 @@ import 'package:myporfolio/data/my_info.dart';
 import 'package:myporfolio/widget/line_box_widget.dart';
 import 'package:myporfolio/widget/nth.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:transparent_image/transparent_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../config/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -70,21 +71,15 @@ class MyProjects extends StatelessWidget {
                       ? Nth()
                       : Container(
                           child: SizedBox(
-                            height: MediaQuery.of(context).size.width * .25,
-                            width: 190,
-                            child: FittedBox(
-                              child: GestureDetector(
-                                onTap: project.playStore.isEmptyOrNull
-                                    ? null
-                                    : () => launch(project.playStore),
-                                child: Image.asset(
-                                  project.image,
-                                  filterQuality: FilterQuality.high,
-                                  fit: project.isFitHeight
-                                      ? BoxFit.fitHeight
-                                      : null,
-                                ).card.roundedSM.make(),
-                              ),
+                            width: MediaQuery.of(context).size.width * .10,
+                            child: GestureDetector(
+                              onTap: project.playStore.isEmptyOrNull
+                                  ? null
+                                  : () => launch(project.playStore),
+                              child: FadeInImage.memoryNetwork(
+                                image: project.image,
+                                placeholder: kTransparentImage,
+                              ).card.roundedSM.make(),
                             ),
                           ),
                         ),
@@ -130,14 +125,13 @@ class MyProjects extends StatelessWidget {
               project.image.isEmptyOrNull
                   ? Nth()
                   : SizedBox(
-                      height: MediaQuery.of(context).size.width * .75,
+                      width: MediaQuery.of(context).size.width * .25,
                       child: GestureDetector(
                         onTap: () => launch(project.playStore),
-                        child: Image.asset(
-                          project.image,
-                          filterQuality: FilterQuality.high,
-                          fit: project.isFitHeight ? BoxFit.fitHeight : null,
-                        ).card.roundedSM.elevation(0).make(),
+                        child: FadeInImage.memoryNetwork(
+                          image: project.image,
+                          placeholder: kTransparentImage,
+                        ).card.roundedSM.make(),
                       ),
                     ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),

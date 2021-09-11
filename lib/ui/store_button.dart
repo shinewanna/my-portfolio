@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myporfolio/config/colors.dart';
 import 'package:myporfolio/config/styles.dart';
+import 'package:myporfolio/model/button.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/widget/nth.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -13,6 +14,7 @@ class StoreButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var btns = <Button>[];
     var deviceType = getDeviceType(MediaQuery.of(context).size);
     var horPad = 30.0;
     var verPad = 20.0;
@@ -21,13 +23,17 @@ class StoreButton extends StatelessWidget {
       verPad = 15.0;
     }
 
-    _buildButton(String url, String text, Color color) => url.isEmptyOrNull
+    void _addUrl(Button button) {
+      if (!button.url.isEmptyOrNull) btns.add(button);
+    }
+
+    _buildButton(Button button) => button.url.isEmptyOrNull
         ? Nth()
         : OutlineButton(
-            onPressed: () => launch(url),
-            color: color,
+            onPressed: () => launch(button.url),
+            color: button.color,
             borderSide: BorderSide(
-              color: color.withOpacity(.5),
+              color: button.color.withOpacity(.5),
               width: 5,
             ),
             padding: EdgeInsets.symmetric(
@@ -38,18 +44,32 @@ class StoreButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: deviceType == DeviceScreenType.mobile
-                ? AppStyle.desc(text, isSelectableText: false)
-                : AppStyle.subtitle(text, isSelectableText: false),
+                ? AppStyle.desc(button.text, isSelectableText: false)
+                : AppStyle.subtitle(button.text, isSelectableText: false),
           );
-    return project.url.isEmptyOrNull
-        ? Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildButton(
-                  project.playStore, 'Play Store', AppColors.secondary),
-              _buildButton(project.appStore, 'App Store', AppColors.primary),
-            ],
-          )
-        : _buildButton(project.url, 'Visit', AppColors.secondary);
+
+    _addUrl(Button(
+      url: project.playStore,
+      text: 'Play Store',
+      color: AppColors.secondary,
+    ));
+    _addUrl(Button(
+      url: project.appStore,
+      text: 'App Store',
+      color: AppColors.primary,
+    ));
+    _addUrl(Button(
+      url: project.url,
+      text: 'Visit',
+      color: AppColors.primary,
+    ));
+
+    return Row(
+        mainAxisAlignment: deviceType == DeviceScreenType.desktop
+            ? MainAxisAlignment.spaceBetween
+            : btns.length > 1
+                ? MainAxisAlignment.spaceBetween
+                : MainAxisAlignment.center,
+        children: btns.map((btn) => _buildButton(btn)).toList());
   }
 }
