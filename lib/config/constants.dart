@@ -11,7 +11,7 @@ mixin AppConstants {
       'https://www.facebook.com/profile.php?id=100013868348978';
 
   static final String cv =
-      'https://drive.google.com/file/d/1L1gHsEO4nKY-_JW4dVU6Cml7RvxOP1ep/view?usp=sharing';
+      'https://drive.google.com/file/d/1XUKPb1UUf6X7eM0T5O1dG2UWqF_n4NSz/view?usp=sharing';
 
   static final String devImage =
       "https://user-images.githubusercontent.com/39454969/132947736-0c47b8e4-281e-4e12-b242-bdf59641fd42.gif";

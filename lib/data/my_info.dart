@@ -7,9 +7,9 @@ import 'package:myporfolio/model/skill.dart';
 class MyInfo {
   String title = "I'm Shine Wanna, Flutter Developer from Yangon, Myanmar.";
   String objective =
-      "My advanced UI/UX, Animation, Error Handling, Readable and Maintainable coding skills can be utilized for making a quality product for customer satisfaction.My critical thinking and problem solving skills will amaze you.I was also participant of International Computer Programming Contest and we won First to Solve problem E and our position was 8 in final result.The sure one I can say, you must not regret about your selection.";
+      "My advanced UI/UX, Animation, Error Handling, Readable and Maintainable coding skills can be utilized for making a quality product for customer satisfaction. My critical thinking and problem solving skills will amaze you. I was also participant of International Computer Programming Contest and we won First to Solve problem E and our position was 8 in final result. The sure one I can say, you must not regret about your selection.";
   String exp =
-      "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now.I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
+      "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now. I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
   String aboutMe =
       "I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
   String getInTouch =
@@ -194,9 +194,21 @@ class MyInfo {
         isFitHeight: true,
       ),
       Project(
-        name: 'PixabayHD app',
+        name: 'Background SMS',
         description:
-            '''This is HD image downloader app. Users can search and download image from PixabayHD image downloader app.''',
+            'This is an SMS library for flutter on Pub.dev. You can send SMS from foreground, background, and headless.',
+        url: 'https://pub.dev/packages/background_sms',
+      ),
+      Project(
+        name: 'Multiselect Dropdown',
+        description: 'This is multiselecting feature for Dropdown widget.',
+        url: 'https://pub.dev/packages//multiselect_dropdown',
+      ),
+      Project(
+        name: 'Android AutoStart',
+        description:
+            '''This is an AutoStart library for flutter. You can request to enable AutoStart with Android AutoStart. Many Developers need to access AutoStart Setting in Flutter including me, but there's no good plugin yet for autostart. So I decided to make AutoStart Plugin for Developers.''',
+        url: 'https://pub.dev/packages/android_autostart',
       ),
       Project(
         name: 'Food Order app',
@@ -204,25 +216,13 @@ class MyInfo {
             '''The food order app is to use for the restaurants. You can order, add new things, remove things.''',
       ),
       Project(
+        name: 'PixabayHD app',
+        description:
+            '''This is HD image downloader app. Users can search and download image from PixabayHD image downloader app.''',
+      ),
+      Project(
         name: 'My Task app',
         description: 'Use to note something.',
-      ),
-      Project(
-        name: 'Background SMS',
-        description:
-            'This is an SMS library for flutter on Pub.dev. You can send SMS from foreground, background, and headless.',
-        url: 'https://pub.dev/packages/background_sms',
-      ),
-      Project(
-        name: 'Multiselectable Dropdown',
-        description: 'This is multiselecting feature for Dropdown widget.',
-        url: 'https://pub.dev/packages/multiselectable_dropdown',
-      ),
-      Project(
-        name: 'Android AutoStart',
-        description:
-            '''This is an AutoStart library for flutter. You can request to enable AutoStart with Android AutoStart. Many Developers need to access AutoStart Setting in Flutter including me, but there's no good plugin yet for autostart. So I decided to make AutoStart Plugin for Developers.''',
-        url: 'https://pub.dev/packages/android_autostart',
       ),
     ];
   }
