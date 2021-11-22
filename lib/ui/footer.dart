@@ -245,18 +245,34 @@ class Footer extends StatelessWidget {
   }
 
   List<Widget> _socialMedia() => [
-        InkWell(
-          onTap: () async {
-            launch(AppConstants.github);
-          },
-          child: AppIcon(AppConstants.githubImage),
+        SizedBox(
+          width: 35,
+          child: InkWell(
+            onTap: () {
+              launch(AppConstants.linkedIn);
+            },
+            child: AppIcon(AppConstants.linkedInImage),
+          ),
         ),
         const SizedBox(width: 20),
-        InkWell(
-          onTap: () {
-            launch(AppConstants.facebook);
-          },
-          child: AppIcon(AppConstants.facebookImage),
+        SizedBox(
+          width: 35,
+          child: InkWell(
+            onTap: () async {
+              launch(AppConstants.github);
+            },
+            child: AppIcon(AppConstants.githubImage),
+          ),
+        ),
+        const SizedBox(width: 20),
+        SizedBox(
+          width: 35,
+          child: InkWell(
+            onTap: () {
+              launch(AppConstants.facebook);
+            },
+            child: AppIcon(AppConstants.facebookImage),
+          ),
         ),
       ];
 }

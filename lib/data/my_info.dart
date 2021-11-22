@@ -9,9 +9,8 @@ class MyInfo {
   String objective =
       "My advanced UI/UX, Animation, Error Handling, Readable and Maintainable coding skills can be utilized for making a quality product for customer satisfaction. My critical thinking and problem solving skills will amaze you. I was also participant of International Computer Programming Contest and we won First to Solve problem E and our position was 8 in final result. The sure one I can say, you must not regret about your selection.";
   String exp =
-      "My journey is start from my second year of my university.I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java.In third year, I was learn and excute some projects with Native Android.Then, I started doing Flutter till now. I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
-  String aboutMe =
-      "I have 1 year experience on Native Android with Java and 3 years experience with Flutter.";
+      "My journey is start from my second year of my university. I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java. In third year, I was learned and execute projects with Native Android. Then, I started doing Flutter till now.";
+  String aboutMe = "I'm a Flutter Developer and develop Android, iOS and Web.";
   String getInTouch =
       "You have an idea, I am here to turn your dream into real digital solution.";
   AcadamicDetail acadamicDetail = AcadamicDetail(
@@ -35,7 +34,7 @@ class MyInfo {
           place: "BizLeap Technology",
           fromTo: "Apr 2019 to July 2019"),
       Experience(
-          role: "Flutter Developer",
+          role: "Senior Flutter Developer",
           place: "Asaygo Company",
           fromTo: "Aug 2019 - Till Date"),
     ];
@@ -47,7 +46,10 @@ class MyInfo {
       Skill(name: 'Android'),
       Skill(name: 'Java'),
       Skill(name: 'Dart'),
-      Skill(name: 'Git'),
+      Skill(name: 'OOP'),
+      Skill(name: 'Architecture Pattern(MVVM, MVC, MVP)'),
+      Skill(name: 'GitHub'),
+      Skill(name: 'GitLab'),
       Skill(name: 'Firebase'),
       Skill(name: 'OneSignal'),
       Skill(name: 'CodeMagic'),
