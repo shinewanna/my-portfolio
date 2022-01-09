@@ -43,16 +43,23 @@ class MyInfo {
   void _setSkills() {
     skills = [
       Skill(name: 'Flutter'),
-      Skill(name: 'Android'),
+      Skill(name: 'Native Android(Java)'),
       Skill(name: 'Java'),
       Skill(name: 'Dart'),
       Skill(name: 'OOP'),
       Skill(name: 'Architecture Pattern(MVVM, MVC, MVP)'),
-      Skill(name: 'GitHub'),
-      Skill(name: 'GitLab'),
+      Skill(name: 'APIs Integration'),
       Skill(name: 'Firebase'),
       Skill(name: 'OneSignal'),
+      Skill(name: 'Ads Integration'),
+      Skill(name: 'In-app purchase'),
+      Skill(name: 'Dependency Injection'),
+      Skill(name: 'GitHub'),
+      Skill(name: 'GitLab'),
+      Skill(name: 'GitHub Actions'),
       Skill(name: 'CodeMagic'),
+      Skill(name: 'Automation Testing(Unit, Widget, Integrated Testing)'),
+      Skill(name: 'Mock Test'),
       Skill(name: 'Photoshop'),
       Skill(name: 'Adobe XD'),
       Skill(name: 'Flare'),
@@ -69,6 +76,7 @@ class MyInfo {
       Skill(name: 'CSS'),
       Skill(name: 'C#'),
       Skill(name: 'Swift(Learning)'),
+      
     ];
   }
 
@@ -94,13 +102,8 @@ class MyInfo {
       ),
       Project(
         name: 'ChoChoLay House',
-        description: '''This is real estate application. 
-            1.User can add which they want to sale and rent house, apartment, etc. 
-            2.User can easily search with Map. 
-            3.User can messaging each other. 
-            4.User can disable their own property. 
-            5.User can search their surrounding sale and rent houses
-            ''',
+        description:
+            '''This is real estate application. Users can add their properties which they want to sale and rent house, apartment, etc. Users can easily search with Map, messaging each other, disable their own property, search their surrounding sale and rent houses.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947364-fafc648b-71d4-4793-a79e-68b5c96c9d6f.png',
         playStore:

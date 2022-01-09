@@ -40,17 +40,12 @@ class MyProjects extends StatelessWidget {
               color: AppColors.secondary,
             ),
             const SizedBox(height: 50),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.width * .15,
-              ),
-              child: Wrap(
-                children: myInfo.projects
-                    .map((p) => _buildProject(context, p))
-                    .toList(),
-                spacing: 5,
-                runSpacing: 5,
-              ),
+            Wrap(
+              children: myInfo.projects
+                  .map((p) => _buildProject(context, p))
+                  .toList(),
+              spacing: 5,
+              runSpacing: 5,
             ),
           ],
         ),
