@@ -77,7 +77,6 @@ class MyInfo {
       Skill(name: 'CSS'),
       Skill(name: 'C#'),
       Skill(name: 'Swift(Learning)'),
-      
     ];
   }
 
@@ -129,6 +128,15 @@ class MyInfo {
             'https://user-images.githubusercontent.com/39454969/132947383-8d3cdd7c-2d41-489d-b59d-35245fba07bb.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.chocholay.zay',
+      ),
+      Project(
+        name: 'VidMate Lite',
+        description:
+            '''VidMate Lite is a Video Downloader app. You can download videos and audios from UTube, Facebook, Instagram, etc..''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/151582760-2560e441-90db-4f06-a739-b42938110e13.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.swn.tube_downloader',
       ),
       Project(
         name: 'Second Space: Launcher',
