@@ -130,9 +130,9 @@ class MyInfo {
             'https://play.google.com/store/apps/details?id=com.chocholay.zay',
       ),
       Project(
-        name: 'VidMate Lite',
+        name: 'iTube: Video Downloader',
         description:
-            '''VidMate Lite is a Video Downloader app. You can download videos and audios from UTube, Facebook, Instagram, etc..''',
+            '''iTube is a Video Downloader app. You can download videos and audios from UTube, Facebook, Instagram, etc..''',
         image:
             'https://user-images.githubusercontent.com/39454969/151582760-2560e441-90db-4f06-a739-b42938110e13.png',
         playStore:
