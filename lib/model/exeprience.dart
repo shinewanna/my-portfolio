@@ -3,5 +3,5 @@ class Experience {
   final String place;
   final String fromTo;
 
-  Experience({this.role, this.place, this.fromTo});
+  Experience({required this.role, required this.place, required this.fromTo});
 }

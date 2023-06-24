@@ -10,7 +10,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class StoreButton extends StatelessWidget {
   final Project project;
-  const StoreButton({Key key, this.project}) : super(key: key);
+  const StoreButton({Key? key, required this.project}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +29,27 @@ class StoreButton extends StatelessWidget {
 
     _buildButton(Button button) => button.url.isEmptyOrNull
         ? Nth()
-        : OutlineButton(
-            onPressed: () => launch(button.url),
-            color: button.color,
-            borderSide: BorderSide(
-              color: button.color.withOpacity(.5),
-              width: 5,
-            ),
-            padding: EdgeInsets.symmetric(
-              horizontal: horPad,
-              vertical: verPad,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+        : OutlinedButton(
+            onPressed: () => launch(button.url!),
+            style: ButtonStyle(
+              side: MaterialStateProperty.resolveWith<BorderSide>((states) {
+                return BorderSide(
+                  color: button.color.withOpacity(.5),
+                  width: 5,
+                );
+              }),
+              padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                EdgeInsets.symmetric(
+                  horizontal: horPad,
+                  vertical: verPad,
+                ),
+              ),
+              shape: MaterialStateProperty.all<OutlinedBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              backgroundColor: MaterialStateProperty.all<Color?>(button.color),
             ),
             child: deviceType == DeviceScreenType.mobile
                 ? AppStyle.desc(button.text, isSelectableText: false)

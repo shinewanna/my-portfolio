@@ -15,10 +15,10 @@ class MyInfo {
       "You have an idea, I am here to turn your dream into real digital solution.";
   AcadamicDetail acadamicDetail = AcadamicDetail(
       name: "University of Computer Studies Yangon", degree: "B.C.Sc");
-  List<Experience> exps;
-  List<Project> projects;
-  List<Skill> skills;
-  List<Language> langs;
+  late List<Experience> exps;
+  late List<Project> projects;
+  late List<Skill> skills;
+  late List<Language> langs;
 
   MyInfo() {
     _setSkills();

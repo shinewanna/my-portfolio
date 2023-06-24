@@ -5,7 +5,8 @@ import 'package:velocity_x/velocity_x.dart';
 class LineBoxWidget extends StatelessWidget {
   final String title;
   final Color color;
-  const LineBoxWidget({Key key, this.title, this.color}) : super(key: key);
+  const LineBoxWidget({Key? key, required this.title, required this.color})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

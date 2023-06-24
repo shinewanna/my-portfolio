@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/model/project.dart';
@@ -70,9 +69,9 @@ class MyProjects extends StatelessWidget {
                             child: GestureDetector(
                               onTap: project.playStore.isEmptyOrNull
                                   ? null
-                                  : () => launch(project.playStore),
+                                  : () => launch(project.playStore!),
                               child: FadeInImage.memoryNetwork(
-                                image: project.image,
+                                image: project.image!,
                                 placeholder: kTransparentImage,
                               ).card.roundedSM.make(),
                             ),
@@ -122,9 +121,9 @@ class MyProjects extends StatelessWidget {
                   : SizedBox(
                       width: MediaQuery.of(context).size.width * .25,
                       child: GestureDetector(
-                        onTap: () => launch(project.playStore),
+                        onTap: () => launch(project.playStore!),
                         child: FadeInImage.memoryNetwork(
-                          image: project.image,
+                          image: project.image!,
                           placeholder: kTransparentImage,
                         ).card.roundedSM.make(),
                       ),

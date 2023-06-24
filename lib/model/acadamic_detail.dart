@@ -2,5 +2,5 @@ class AcadamicDetail {
   final String name;
   final String degree;
 
-  AcadamicDetail({this.name, this.degree});
+  AcadamicDetail({required this.name, required this.degree});
 }

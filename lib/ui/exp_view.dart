@@ -4,7 +4,7 @@ import 'package:myporfolio/data/my_info.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ExpView extends StatelessWidget {
-  const ExpView({Key key}) : super(key: key);
+  const ExpView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
