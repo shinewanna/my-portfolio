@@ -8,15 +8,15 @@ class AboutMeTextView extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-          text: "About ",
+          text: 'About ',
           style: TextStyle(color: AppColors.text, fontSize: 50),
           children: [
             TextSpan(
-              text: "M",
+              text: 'M',
               style: TextStyle(color: AppColors.primary, fontSize: 50),
             ),
             TextSpan(
-              text: "e",
+              text: 'e',
               style: TextStyle(color: AppColors.secondary, fontSize: 50),
             ),
           ]),

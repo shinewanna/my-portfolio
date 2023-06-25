@@ -32,7 +32,7 @@ class Footer extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          SelectableText(
+          Text(
             myInfo.getInTouch,
             style: TextStyle(
               color: AppColors.text,
@@ -64,7 +64,7 @@ class Footer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          SelectableText(
+          Text(
             'Phone Number',
             style: TextStyle(
               color: AppColors.text,
@@ -72,7 +72,7 @@ class Footer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 7),
-          SelectableText(
+          Text(
             AppConstants.phone,
             style: TextStyle(
               color: AppColors.text,
@@ -80,7 +80,7 @@ class Footer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          SelectableText(
+          Text(
             'Location',
             style: TextStyle(
               color: AppColors.text,
@@ -88,7 +88,7 @@ class Footer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 7),
-          SelectableText(
+          Text(
             AppConstants.location,
             style: TextStyle(
               color: AppColors.text,
@@ -139,7 +139,7 @@ class Footer extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 20),
-                          SelectableText(
+                          Text(
                             myInfo.aboutMe,
                             style: TextStyle(
                               color: AppColors.text,
@@ -161,7 +161,7 @@ class Footer extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SelectableText(
+                    Text(
                       'Proudly powered by Shine Wanna ©${DateTime.now().year}',
                       style: TextStyle(
                         color: AppColors.text.withOpacity(.75),
@@ -206,7 +206,7 @@ class Footer extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    SelectableText(
+                    Text(
                       myInfo.aboutMe,
                       style: TextStyle(
                         color: AppColors.text,
@@ -229,7 +229,7 @@ class Footer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                SelectableText(
+                Text(
                   'Proudly powered by Shine Wanna ©${DateTime.now().year}',
                   style: TextStyle(
                     color: AppColors.text.withOpacity(.75),

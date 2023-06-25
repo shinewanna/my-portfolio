@@ -5,18 +5,19 @@ import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/model/skill.dart';
 
 class MyInfo {
-  String title = "I'm Shine Wanna, Flutter Developer from Bangkok, Thailand.";
+  String title =
+      '''I'm Shine Wanna, Flutter Developer from Bangkok, Thailand.''';
   String objective =
-      "Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\nMy strong problem-solving abilities and experience in international programming contests make me a valuable asset.";
-  String exp =
-      "My journey is start from my second year of my university. I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java. In third year, I was learned and execute projects with Native Android. Then, I started doing Flutter till now.";
-  String aboutMe = "I'm a Flutter Developer and develop Android, iOS and Web.";
+      'Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\nMy strong problem-solving abilities and experience in international programming contests make me a valuable asset.';
+  String aboutMe =
+      '''I'm a Flutter Developer and develop Android, iOS and Web.''';
   String getInTouch =
-      "You have an idea, I am here to turn your dream into real digital solution.";
+      'You have an idea, I am here to turn your dream into real digital solution.';
   AcadamicDetail acadamicDetail = AcadamicDetail(
-      name: "University of Computer Studies Yangon", degree: "B.C.Sc");
+      name: 'University of Computer Studies Yangon', degree: 'B.C.Sc');
   late List<Experience> exps;
-  late List<Project> projects;
+  late List<Project> personalProjects;
+  late List<Project> professionalProjects;
   late List<Skill> skills;
   late List<Language> langs;
 
@@ -30,30 +31,40 @@ class MyInfo {
   void _setExps() {
     exps = [
       Experience(
-        role: "Mobile Engineer",
-        place: "YPB International Group",
-        fromTo: "Apr 2019 - Present",
+        role: 'Mobile Engineer',
+        place: 'YPB International Group',
+        fromTo: 'Apr 2022 - Present',
         bullets: [
           'International working environment',
           'Develop Unifai, MotifMirco, YPB Tracer apps with Flutter',
           'Develop YPB Camera Plugin in Flutter with Swift',
-          'Develop YPB green image detector with Python',
+          'Develop YPB multiple layer custom QR and Green image detector with Python',
           'Migrate OpenCV in Flutter',
           'Agile development',
-          'Setting up, CI/CD, Firebase, and GitHub action'
+          'Setting up CI/CD, PlayStore, AppStore, Firebase and GitHub action'
         ],
       ),
       Experience(
-        role: "Senior Flutter Developer",
-        place: "Asaygo Company",
-        fromTo: "Aug 2019 - Apr 2022",
-        bullets: [],
+        role: 'Senior Flutter Developer',
+        place: 'Asaygo Company',
+        fromTo: 'Aug 2019 - Apr 2022',
+        bullets: [
+          'Develop ChoChoLay Zay, ChoChoLay House, ChoChoLay Chat, CMTFDN apps with Flutter',
+          'Develop Multiselectable DropDown widget and publish to Flutter pub',
+          'Setting up CI/CD, PlayStore, AppStore, OneSignal, Firebase, Map and GitHub action',
+        ],
       ),
       Experience(
-        role: "Software Engineer",
-        place: "BizLeap Technology",
-        fromTo: "Apr 2019 to July 2019",
-        bullets: [],
+        role: 'Software Engineer(Internship)',
+        place: 'BizLeap Technology',
+        fromTo: 'Apr 2019 - July 2019',
+        bullets: [
+          'Work closely with Senior Developers',
+          'Build simple Java project and deploy using Apache',
+          'Learn OOP, ORM, MVC, Clean Code',
+          'Unit Testing, QA Testing',
+          'Write vim scripts',
+        ],
       ),
     ];
   }
@@ -102,24 +113,14 @@ class MyInfo {
 
   void _setLangs() {
     langs = [
-      Language(name: "Burmese", proficiency: 1.0),
-      Language(name: "English", proficiency: .87),
-      Language(name: "Tamil", proficiency: .87),
+      Language(name: 'Burmese', proficiency: 1.0),
+      Language(name: 'English', proficiency: .87),
+      Language(name: 'Tamil', proficiency: .87),
     ];
   }
 
   void _setProjects() {
-    projects = [
-      Project(
-        name: 'Share Notification',
-        description:
-            '''This app is to share any of installed apps and system apps notifications. Most people use for social media messge sharing (like Messenger, Twitter, Instagram, Tiktok, etc), for business (Banking) and Messaging, Incoming Call and others. Like hacking, you can sniff other notification messages in your device. The app doesn't show login information to user. So, feel free to try it.''',
-        image:
-            'https://user-images.githubusercontent.com/39454969/132948581-497ba7d2-b283-49f8-9f38-e90c8c8cacfd.png',
-        playStore:
-            'https://play.google.com/store/apps/details?id=com.share.notification',
-        url: 'https://shinewanna.github.io/sharenotification/',
-      ),
+    professionalProjects = [
       Project(
         name: 'ChoChoLay House',
         description:
@@ -150,9 +151,32 @@ class MyInfo {
             'https://play.google.com/store/apps/details?id=com.chocholay.zay',
       ),
       Project(
+        name: 'CMTFDN',
+        description:
+            '''Tickets scanner for Social Organization Gathering Event. Entrance ticket holders can attend the event. Event workers will scan with the app to accepting the guests and leave report.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132947377-c18f1003-ba57-46e4-99d6-23957f45dba9.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.asaygo.cmtfdn',
+        isFitHeight: true,
+      ),
+    ];
+
+    personalProjects = [
+      Project(
+        name: 'Share Notification',
+        description:
+            '''This app has more than 100k+ active users. This app is to share any of installed apps and system apps notifications. Most people use for social media messge sharing (like Messenger, Twitter, Instagram, Tiktok, etc), for business (Banking) and Messaging, Incoming Call and others. Like hacking, you can sniff other notification messages in your device. The app doesn't show login information to user. So, feel free to try it.''',
+        image:
+            'https://user-images.githubusercontent.com/39454969/132948581-497ba7d2-b283-49f8-9f38-e90c8c8cacfd.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.share.notification',
+        url: 'https://shinewanna.github.io/sharenotification/',
+      ),
+      Project(
         name: 'iTube: Video Downloader',
         description:
-            '''iTube is a Video Downloader app. You can download videos and audios from UTube, Facebook, Instagram, etc..''',
+            '''iTube is a Video Downloader app. This app has more than 50k+ active users. You can download videos and audios from UTube, Facebook, Instagram, etc..''',
         image:
             'https://user-images.githubusercontent.com/39454969/151582760-2560e441-90db-4f06-a739-b42938110e13.png',
         playStore:
@@ -161,7 +185,7 @@ class MyInfo {
       Project(
         name: 'Second Space: Launcher',
         description:
-            '''This app is for who willing hide their apps with second space feature but they don't have and for simple smooth Launcher users. Fast, lightweight and clean launcher for Android phones. Play with Wallpapers, Add Hide Apps, Change Hide App Design, Double Tap to Lock Screen and Try Second Space!!!.''',
+            '''This app has more than 50k+ active users. This app is for who willing hide their apps with second space feature but they don't have and for simple smooth Launcher users. Fast, lightweight and clean launcher for Android phones. Play with Wallpapers, Add Hide Apps, Change Hide App Design, Double Tap to Lock Screen and Try Second Space!!!.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132946754-5e50cf3f-2be4-4bce-83d1-70547d00a163.png',
         playStore:
@@ -197,21 +221,11 @@ class MyInfo {
       Project(
         name: 'Annoy Notification',
         description:
-            '''It's a virus app. It's to annoy your friends with funny notifications. Recommended not to try it.''',
+            '''It's a virus app. It's to annoy your friends with funny notifications. I recommend not to try it.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132950615-75f3c946-b5b8-4d01-8671-d46c550b3083.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.swn.creepy',
-      ),
-      Project(
-        name: 'CMTFDN',
-        description:
-            '''Tickets scanner for Social Organization Gathering Event. Entrance ticket holders can attend the event. Event workers will scan with the app to accepting the guests and leave report.''',
-        image:
-            'https://user-images.githubusercontent.com/39454969/132947377-c18f1003-ba57-46e4-99d6-23957f45dba9.png',
-        playStore:
-            'https://play.google.com/store/apps/details?id=com.asaygo.cmtfdn',
-        isFitHeight: true,
       ),
       Project(
         name: 'Flare Bottom Navigation',

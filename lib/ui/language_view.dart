@@ -14,7 +14,7 @@ class LanguageView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppStyle.subtitle("Language"),
+          AppStyle.subtitle('Language'),
           6.heightBox,
           ...myInfo.langs
               .map((e) => Column(
@@ -23,8 +23,8 @@ class LanguageView extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          e.name.selectableText.make(),
-                          "Proficiency".selectableText.make(),
+                          e.name.text.make(),
+                          'Proficiency'.text.make(),
                         ],
                       ),
                       LinearPercentIndicator(

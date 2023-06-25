@@ -11,20 +11,31 @@ import 'package:url_launcher/url_launcher.dart';
 import '../config/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class MyProjects extends StatelessWidget {
+class Projects extends StatelessWidget {
+  final String title;
+  final List<Project> projects;
+  final Color titleBorderColor;
+
+  const Projects(
+      {Key? key,
+      required this.title,
+      required this.projects,
+      required this.titleBorderColor})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       desktop: Padding(
-        padding: EdgeInsets.symmetric(vertical: 100),
+        padding: EdgeInsets.symmetric(vertical: 30),
         child: Column(
           children: [
             LineBoxWidget(
-              title: 'PROJECTS',
-              color: AppColors.secondary,
+              title: title,
+              color: titleBorderColor,
             ),
             const SizedBox(height: 50),
-            ...myInfo.projects.map((p) => _buildProject(context, p)).toList(),
+            ...projects.map((p) => _buildProject(context, p)).toList(),
           ],
         ),
       ),
@@ -35,14 +46,12 @@ class MyProjects extends StatelessWidget {
         child: Column(
           children: [
             LineBoxWidget(
-              title: 'PROJECTS',
-              color: AppColors.secondary,
+              title: title,
+              color: titleBorderColor,
             ),
             const SizedBox(height: 50),
             Wrap(
-              children: myInfo.projects
-                  .map((p) => _buildProject(context, p))
-                  .toList(),
+              children: projects.map((p) => _buildProject(context, p)).toList(),
               spacing: 5,
               runSpacing: 5,
             ),

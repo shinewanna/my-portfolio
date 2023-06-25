@@ -8,26 +8,29 @@ class SkillView extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimationLimiter(
       child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: AnimationConfiguration.toStaggeredList(
-        duration: const Duration(milliseconds: 500),
-        childAnimationBuilder: (widget) => SlideAnimation(
-          verticalOffset: 50.0,
-          child: FadeInAnimation(
-            child: widget,
-          ),
-        ),
-        children: [
-          "What Skills I Have?".selectableText.xl.make(),
-          10.heightBox,
-          Wrap(
-            spacing: 8.0,
-            runSpacing: 8.0,
-            children: myInfo.skills
-                .map((e) => Chip(label: SelectableText(e.name)))
-                .toList(),
-          )
-        ],
-      )),
+            duration: const Duration(milliseconds: 500),
+            childAnimationBuilder: (widget) => SlideAnimation(
+              verticalOffset: 50.0,
+              child: FadeInAnimation(
+                child: widget,
+              ),
+            ),
+            children: [
+              'What Skills I Have?'.text.xl.make(),
+              10.heightBox,
+              Wrap(
+                spacing: 8.0,
+                runSpacing: 8.0,
+                alignment: WrapAlignment.center,
+                children: myInfo.skills
+                    .map((e) => Chip(label: Text(e.name)))
+                    .toList(),
+              )
+            ],
+          )),
     );
   }
 }
