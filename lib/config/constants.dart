@@ -1,9 +1,9 @@
 mixin AppConstants {
   static final String mail = 'shinewanna97@gmail.com';
 
-  static final String phone = '(+95) 9766209961';
+  static final String phone = '(+66) 652424420';
 
-  static final String location = 'Yangon, Myanmar';
+  static final String location = 'Bangkok, Thailand';
 
   static final String github = 'https://github.com/shinewanna';
 
