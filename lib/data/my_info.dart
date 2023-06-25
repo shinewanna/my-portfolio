@@ -5,9 +5,9 @@ import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/model/skill.dart';
 
 class MyInfo {
-  String title = "I'm Shine Wanna, Flutter Developer from Yangon, Myanmar.";
+  String title = "I'm Shine Wanna, Flutter Developer from Bangkok, Thailand.";
   String objective =
-      "My advanced UI/UX, Animation, Error Handling, Readable and Maintainable coding skills can be utilized for making a quality product for customer satisfaction. My critical thinking and problem solving skills will amaze you. I was also participant of International Computer Programming Contest and we won First to Solve problem E and our position was 8 in final result. The sure one I can say, you must not regret about your selection.";
+      "Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\nMy strong problem-solving abilities and experience in international programming contests make me a valuable asset.";
   String exp =
       "My journey is start from my second year of my university. I have learned Java from my university when second year and I love to play with Java.Then, I decided to change my path that's Java to Native Android with Java. In third year, I was learned and execute projects with Native Android. Then, I started doing Flutter till now.";
   String aboutMe = "I'm a Flutter Developer and develop Android, iOS and Web.";
@@ -30,22 +30,43 @@ class MyInfo {
   void _setExps() {
     exps = [
       Experience(
-          role: "Software Engineer",
-          place: "BizLeap Technology",
-          fromTo: "Apr 2019 to July 2019"),
+        role: "Mobile Engineer",
+        place: "YPB International Group",
+        fromTo: "Apr 2019 - Present",
+        bullets: [
+          'International working environment',
+          'Develop Unifai, MotifMirco, YPB Tracer apps with Flutter',
+          'Develop YPB Camera Plugin in Flutter with Swift',
+          'Develop YPB green image detector with Python',
+          'Migrate OpenCV in Flutter',
+          'Agile development',
+          'Setting up, CI/CD, Firebase, and GitHub action'
+        ],
+      ),
       Experience(
-          role: "Senior Flutter Developer",
-          place: "Asaygo Company",
-          fromTo: "Aug 2019 - Till Date"),
+        role: "Senior Flutter Developer",
+        place: "Asaygo Company",
+        fromTo: "Aug 2019 - Apr 2022",
+        bullets: [],
+      ),
+      Experience(
+        role: "Software Engineer",
+        place: "BizLeap Technology",
+        fromTo: "Apr 2019 to July 2019",
+        bullets: [],
+      ),
     ];
   }
 
   void _setSkills() {
     skills = [
       Skill(name: 'Flutter'),
-      Skill(name: 'Native Android(Java)'),
+      Skill(name: 'iOS(Swift)'),
+      Skill(name: 'Android(Java)'),
       Skill(name: 'Java'),
       Skill(name: 'Dart'),
+      Skill(name: 'Python'),
+      Skill(name: 'Kaggle'),
       Skill(name: 'OOP'),
       Skill(name: 'Architecture Pattern(MVVM, MVC, MVP)'),
       Skill(name: 'APIs Integration'),
@@ -76,7 +97,6 @@ class MyInfo {
       Skill(name: 'HTML'),
       Skill(name: 'CSS'),
       Skill(name: 'C#'),
-      Skill(name: 'Swift(Learning)'),
     ];
   }
 
@@ -84,7 +104,7 @@ class MyInfo {
     langs = [
       Language(name: "Burmese", proficiency: 1.0),
       Language(name: "English", proficiency: .87),
-      Language(name: "Tamil", proficiency: .9),
+      Language(name: "Tamil", proficiency: .87),
     ];
   }
 

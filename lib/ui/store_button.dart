@@ -19,7 +19,7 @@ class StoreButton extends StatelessWidget {
     var horPad = 30.0;
     var verPad = 20.0;
     if (deviceType == DeviceScreenType.mobile) {
-      horPad = 10.0;
+      horPad = 15.0;
       verPad = 15.0;
     }
 
@@ -49,11 +49,16 @@ class StoreButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              backgroundColor: MaterialStateProperty.all<Color?>(button.color),
+              textStyle: MaterialStateProperty.all<TextStyle>(
+                TextStyle(color: Colors.black),
+              ),
             ),
-            child: deviceType == DeviceScreenType.mobile
-                ? AppStyle.desc(button.text, isSelectableText: false)
-                : AppStyle.subtitle(button.text, isSelectableText: false),
+            child: Text(
+              button.text,
+              style: TextStyle(
+                color: AppColors.text,
+              ),
+            ),
           );
 
     _addUrl(Button(

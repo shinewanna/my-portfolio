@@ -22,157 +22,160 @@ import 'package:velocity_x/velocity_x.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ScreenTypeLayout(
-        desktop: Center(
-          child: CustomScrollView(
-            physics: BouncingScrollPhysics(),
-            slivers: [
-              Header(),
-              SliverPadding(
-                padding: const EdgeInsets.all(40.0),
-                sliver: SliverToBoxAdapter(
-                  child: AnimateIfVisibleWrapper(
+    return SelectionArea(
+      child: Scaffold(
+        body: ScreenTypeLayout(
+          desktop: Center(
+            child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
+              slivers: [
+                Header(),
+                SliverPadding(
+                  padding: const EdgeInsets.all(40.0),
+                  sliver: SliverToBoxAdapter(
+                    child: AnimateIfVisibleWrapper(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            VisibleAnimate(
+                              id: 'main',
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Image.asset(
+                                          'asset/Icon-192.png',
+                                          height: 200,
+                                          width: 200,
+                                          fit: BoxFit.cover,
+                                        ).card.make(),
+                                        20.heightBox,
+                                        AboutMeTextView(),
+                                        AppStyle.subtitle(myInfo.title),
+                                        10.heightBox,
+                                        AppStyle.desc(myInfo.objective),
+                                        20.heightBox,
+                                        AppStyle.title("Experience"),
+                                        10.heightBox,
+                                        // AppStyle.desc(myInfo.exp),
+                                        20.heightBox,
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ExpView(),
+                                            Expanded(child: SkillView()),
+                                          ],
+                                        ),
+                                        50.heightBox,
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            EducationView(),
+                                            50.widthBox,
+                                            LanguageView(),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  FadeInImage.memoryNetwork(
+                                    image: AppConstants.devImage,
+                                    placeholder: kTransparentImage,
+                                    height: 500,
+                                    width: 500,
+                                    alignment: Alignment.center,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            VisibleAnimate(id: 'project', child: MyProjects()),
+                            VisibleAnimate(id: 'footer', child: Footer()),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          mobile: Center(
+            child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
+              slivers: [
+                Header(),
+                SliverPadding(
+                  padding: const EdgeInsets.all(40.0),
+                  sliver: SliverToBoxAdapter(
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
-                          VisibleAnimate(
-                            id: 'main',
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'asset/Icon-192.png',
-                                        height: 200,
-                                        width: 200,
-                                        fit: BoxFit.cover,
-                                      ).card.make(),
-                                      20.heightBox,
-                                      AboutMeTextView(),
-                                      AppStyle.subtitle(myInfo.title),
-                                      10.heightBox,
-                                      AppStyle.desc(myInfo.objective),
-                                      20.heightBox,
-                                      AppStyle.subtitle("Experience"),
-                                      10.heightBox,
-                                      AppStyle.desc(myInfo.exp),
-                                      20.heightBox,
-                                      Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          ExpView(),
-                                          Expanded(child: SkillView()),
-                                        ],
-                                      ),
-                                      50.heightBox,
-                                      Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          EducationView(),
-                                          50.widthBox,
-                                          LanguageView(),
-                                        ],
-                                      )
-                                    ],
-                                  ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(
+                                      'asset/Icon-192.png',
+                                      height: 200,
+                                      width: 200,
+                                      fit: BoxFit.cover,
+                                    ).card.make(),
+                                    20.heightBox,
+                                    AboutMeTextView(),
+                                    AppStyle.subtitle(myInfo.title),
+                                    10.heightBox,
+                                    AppStyle.desc(myInfo.objective),
+                                    20.heightBox,
+                                    AppStyle.subtitle("Experience"),
+                                    10.heightBox,
+                                    AppStyle.desc(myInfo.exp),
+                                    20.heightBox,
+                                    ExpView(),
+                                    SkillView(),
+                                    30.heightBox,
+                                    EducationView(),
+                                    20.heightBox,
+                                    LanguageView(),
+                                  ],
                                 ),
-                                FadeInImage.memoryNetwork(
-                                  image: AppConstants.devImage,
-                                  placeholder: kTransparentImage,
-                                  height: 500,
-                                  width: 500,
-                                  alignment: Alignment.center,
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          VisibleAnimate(id: 'project', child: MyProjects()),
-                          VisibleAnimate(id: 'footer', child: Footer()),
+                          MyProjects(),
+                          Footer(),
                         ],
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-        mobile: Center(
-          child: CustomScrollView(
-            physics: BouncingScrollPhysics(),
-            slivers: [
-              Header(),
-              SliverPadding(
-                padding: const EdgeInsets.all(40.0),
-                sliver: SliverToBoxAdapter(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                    'asset/Icon-192.png',
-                                    height: 200,
-                                    width: 200,
-                                    fit: BoxFit.cover,
-                                  ).card.make(),
-                                  20.heightBox,
-                                  AboutMeTextView(),
-                                  AppStyle.subtitle(myInfo.title),
-                                  10.heightBox,
-                                  AppStyle.desc(myInfo.objective),
-                                  20.heightBox,
-                                  AppStyle.subtitle("Experience"),
-                                  10.heightBox,
-                                  AppStyle.desc(myInfo.exp),
-                                  20.heightBox,
-                                  ExpView(),
-                                  SkillView(),
-                                  30.heightBox,
-                                  EducationView(),
-                                  20.heightBox,
-                                  LanguageView(),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        MyProjects(),
-                        Footer(),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
+        floatingActionButton: VxBox(
+          child: DayNightSwitcherIcon(
+            dayBackgroundColor: AppColors.primary,
+            sunColor: AppColors.secondary,
+            isDarkModeEnabled: !CacheService.settings.darkMode.getValue(),
+            onStateChanged: (_) {
+              CacheService.settings.darkMode
+                  .setValue(!CacheService.settings.darkMode.getValue());
+            },
           ),
-        ),
+        ).height(70).roundedFull.shadow5xl.make(),
       ),
-      floatingActionButton: VxBox(
-        child: DayNightSwitcherIcon(
-          dayBackgroundColor: AppColors.primary,
-          sunColor: AppColors.secondary,
-          isDarkModeEnabled: !CacheService.settings.darkMode.getValue(),
-          onStateChanged: (_) {
-            CacheService.settings.darkMode
-                .setValue(!CacheService.settings.darkMode.getValue());
-          },
-        ),
-      ).height(70).roundedFull.shadow5xl.make(),
     );
   }
 }

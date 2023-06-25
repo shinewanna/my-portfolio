@@ -35,6 +35,9 @@ class LanguageView extends StatelessWidget {
                         progressColor: AppColors.primary,
                         animation: true,
                         animationDuration: 1000,
+                        barRadius: Radius.circular(8.0),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 0, vertical: 2.0),
                       ),
                       10.heightBox,
                     ],
