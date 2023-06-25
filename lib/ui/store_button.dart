@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myporfolio/config/colors.dart';
-import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/model/button.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/widget/nth.dart';

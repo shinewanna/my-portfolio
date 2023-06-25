@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/ui/store_button.dart';
-import 'package:myporfolio/data/my_info.dart';
 import 'package:myporfolio/widget/line_box_widget.dart';
 import 'package:myporfolio/widget/nth.dart';
 import 'package:responsive_builder/responsive_builder.dart';
