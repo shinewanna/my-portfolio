@@ -170,7 +170,7 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'ChoChoLay Zay',
         description:
-            '''This is a ERP application. This project is to my junior for learning purposes and I'm developing, helping and guiding him to develop a professional application. This app is like OneKyat application, user can upload there items and search property what they want.''',
+            '''The ERP application I am developing is aimed at providing a learning platform for my junior developer to gain experience and develop a professional application. The app is similar to OneKyat, where users can upload their items for sale and search for properties that meet their requirements.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947383-8d3cdd7c-2d41-489d-b59d-35245fba07bb.png',
         playStore:
@@ -179,7 +179,7 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'CMTFDN',
         description:
-            '''Tickets scanner for Social Organization Gathering Event. Entrance ticket holders can attend the event. Event workers will scan with the app to accepting the guests and leave report.''',
+            '''The application serves as a ticket scanner for a social organization's gathering event. It allows entrance ticket holders to attend the event. Event workers can use the app to scan the tickets, verify their validity, and track attendance. Additionally, the app enables event workers to generate reports regarding the guest attendance.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947377-c18f1003-ba57-46e4-99d6-23957f45dba9.png',
         playStore:
