@@ -8,7 +8,7 @@ class MyInfo {
   String title =
       '''I'm Shine Wanna, Flutter Developer from Bangkok, Thailand.''';
   String objective =
-      'Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\nMy strong problem-solving abilities and experience in international programming contests make me a valuable asset.';
+      'Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\n\nIn addition to my strong problem-solving abilities and experience, I have also participated in international computer programming contests. In one particular contest, our team achieved significant success by winning the First to Solve problem E. Overall, we secured the 8th position in the final results. With this proven track record, I am confident that you will not regret selecting me as a valuable asset to your team.';
   String aboutMe =
       '''I'm a Flutter Developer and develop Android, iOS and Web.''';
   String getInTouch =
@@ -90,7 +90,7 @@ class MyInfo {
       Skill(name: 'GitLab'),
       Skill(name: 'GitHub Actions'),
       Skill(name: 'CodeMagic'),
-      Skill(name: 'Automation Testing(Unit, Widget, Integrated)'),
+      Skill(name: 'Automation Testing'),
       Skill(name: 'Mock Test'),
       Skill(name: 'Shell Scripting'),
       Skill(name: 'Photoshop'),
@@ -192,7 +192,9 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'Share Notification',
         description:
-            '''This app has more than 100k+ active users. This app is to share any of installed apps and system apps notifications. Most people use for social media messge sharing (like Messenger, Twitter, Instagram, Tiktok, etc), for business (Banking) and Messaging, Incoming Call and others. Like hacking, you can sniff other notification messages in your device. The app doesn't show login information to user. So, feel free to try it.''',
+            '''This highly popular app boasts an impressive user base of over 100k+ active users. Its primary purpose is to facilitate the sharing of notifications from both installed apps and system apps. Users can conveniently share notifications from various social media platforms such as Messenger, Twitter, Instagram, TikTok, and more. Additionally, the app is commonly used for business-related activities, including banking notifications, messaging, and incoming call notifications.
+
+It is important to note that the app does not display login information to the user, ensuring a secure and privacy-focused experience. Users can freely explore the app's functionality without concerns about their personal information being compromised. This unique feature allows users to explore and interact with various notification messages within their own device, creating a versatile and engaging user experience''',
         image:
             'https://user-images.githubusercontent.com/39454969/132948581-497ba7d2-b283-49f8-9f38-e90c8c8cacfd.png',
         playStore:
@@ -202,7 +204,7 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'iTube: Video Downloader',
         description:
-            '''iTube is a Video Downloader app. This app has more than 50k+ active users. You can download videos and audios from UTube, Facebook, Instagram, etc..''',
+            '''iTube is a highly popular Video Downloader app with an extensive user base of over 50k+ active users. The app provides a convenient platform for users to download videos and audios from popular platforms such as YouTube, Facebook, Instagram, and more.''',
         image:
             'https://user-images.githubusercontent.com/39454969/151582760-2560e441-90db-4f06-a739-b42938110e13.png',
         playStore:
@@ -211,7 +213,9 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'Second Space: Launcher',
         description:
-            '''This app has more than 50k+ active users. This app is for who willing hide their apps with second space feature but they don't have and for simple smooth Launcher users. Fast, lightweight and clean launcher for Android phones. Play with Wallpapers, Add Hide Apps, Change Hide App Design, Double Tap to Lock Screen and Try Second Space!!!.''',
+            '''With an impressive user base of over 50k+ active users, this app offers a solution for those who want to hide their apps using the "second space" feature. It provides a simple and smooth launcher experience for Android phones, offering speed, lightweight performance, and a clean interface.
+
+Users can personalize their launcher experience by exploring various wallpapers and customizing the design of hidden apps. The app's highlight feature is the ability to hide specific apps, providing users with privacy and the option to keep certain applications discreetly tucked away.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132946754-5e50cf3f-2be4-4bce-83d1-70547d00a163.png',
         playStore:
@@ -220,7 +224,7 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'Debt Notes',
         description:
-            '''You can easily serialize to your debts. Most of the people have debts to pay or get. So, I decided to make Debt Notes app, to save our time, to more readable, to more customizable our debt note.''',
+            '''Introducing Debt Notes, a user-friendly app designed to simplify the process of managing and tracking debts. In today's world, it's common for individuals to have debts to pay or receive, and Debt Notes aims to streamline this process, saving you time and providing a more organized approach.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132948578-2ca9cac6-e6b0-4515-8cb4-2ff43d012267.png',
         playStore:
@@ -229,7 +233,7 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'Lazy SMS',
         description:
-            '''This is SMS scheduling app. Users can schedule their SMS at any time with their desire Sim Card.''',
+            '''Introducing our SMS Scheduler app, a convenient tool that allows users to schedule SMS messages to be sent at a specific time using their preferred SIM card.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947380-c1955f89-14f5-44e2-92a3-ed8129f458fe.png',
         playStore:
@@ -238,7 +242,7 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'Text Hider',
         description:
-            '''You can encrypt your text like message and you can decrypt from the app. There are five catagories simple Ceasar Cipher's Encryption, Each Key Encryption, Prime Encryption, Perfect Square Encryption, Special Encryption.''',
+            '''Introducing our Text Encryption app, a powerful tool that allows you to encrypt your text messages and decrypt them within the app. With our app, you can ensure the security and confidentiality of your messages by applying various encryption algorithms.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947382-1f894bc5-c678-4310-8f74-25f577af7683.png',
         playStore:
@@ -270,24 +274,25 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
       Project(
         name: 'Background SMS',
         description:
-            'This is an SMS library for flutter on Pub.dev. You can send SMS from foreground, background, and headless.',
+            'THaving an SMS library for Flutter can be very useful for developers who want to incorporate SMS functionality into their Flutter applications. Being able to send SMS from the foreground, background, and headless mode provides flexibility and convenience.',
         url: 'https://pub.dev/packages/background_sms',
       ),
       Project(
         name: 'Multiselect Dropdown',
-        description: 'This is multiselecting feature for Dropdown widget.',
+        description:
+            'Adding a multiselecting feature to the Dropdown widget in Flutter can greatly enhance the user experience and functionality of your app. With the ability to select multiple options from a dropdown list, users can easily make selections that are relevant to their needs.',
         url: 'https://pub.dev/packages//multiselect_dropdown',
       ),
       Project(
         name: 'Android AutoStart',
         description:
-            '''This is an AutoStart library for flutter. You can request to enable AutoStart with Android AutoStart. Many Developers need to access AutoStart Setting in Flutter including me, but there's no good plugin yet for autostart. So I decided to make AutoStart Plugin for Developers.''',
+            '''This is an AutoStart library for Flutter. With this library, you can request to enable AutoStart functionality using Android AutoStart. Many developers, including myself, often need to access the AutoStart setting in Flutter. However, there is currently no reliable plugin available for autostart functionality. That's why I took the initiative to create the AutoStart Plugin for Developers.''',
         url: 'https://pub.dev/packages/android_autostart',
       ),
       Project(
         name: 'Food Order app',
         description:
-            '''The food order app is to use for the restaurants. You can order, add new things, remove things.''',
+            '''The food order app is to use for the restaurants. CRUD features with Firebase backend.''',
       ),
       Project(
         name: 'PixabayHD app',

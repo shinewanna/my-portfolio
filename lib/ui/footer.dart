@@ -36,7 +36,7 @@ class Footer extends StatelessWidget {
             myInfo.getInTouch,
             style: TextStyle(
               color: AppColors.text,
-              fontSize: 13,
+              fontSize: 15,
             ),
           ),
           const SizedBox(height: 20),
@@ -57,7 +57,7 @@ class Footer extends StatelessWidget {
                   AppConstants.mail,
                   style: TextStyle(
                     color: AppColors.text,
-                    fontSize: 13,
+                    fontSize: 15,
                   ),
                 ),
               ],
@@ -76,7 +76,7 @@ class Footer extends StatelessWidget {
             AppConstants.phone,
             style: TextStyle(
               color: AppColors.text,
-              fontSize: 13,
+              fontSize: 15,
             ),
           ),
           const SizedBox(height: 20),
@@ -92,7 +92,7 @@ class Footer extends StatelessWidget {
             AppConstants.location,
             style: TextStyle(
               color: AppColors.text,
-              fontSize: 13,
+              fontSize: 15,
             ),
           )
         ],
@@ -143,7 +143,7 @@ class Footer extends StatelessWidget {
                             myInfo.aboutMe,
                             style: TextStyle(
                               color: AppColors.text,
-                              fontSize: 13,
+                              fontSize: 15,
                             ),
                           ),
                         ],
@@ -210,7 +210,7 @@ class Footer extends StatelessWidget {
                       myInfo.aboutMe,
                       style: TextStyle(
                         color: AppColors.text,
-                        fontSize: 13,
+                        fontSize: 15,
                       ),
                     ),
                   ],

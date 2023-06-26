@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myporfolio/config/styles.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class LineBoxWidget extends StatelessWidget {
@@ -18,7 +19,18 @@ class LineBoxWidget extends StatelessWidget {
             thickness: 3,
           ),
         ),
-        AppStyle.title(title).box.p12.border(color: color, width: 3).make(),
+        ScreenTypeLayout.builder(
+          desktop: (_) => AppStyle.title(title)
+              .box
+              .p12
+              .border(color: color, width: 3)
+              .make(),
+          mobile: (_) => AppStyle.subtitle(title)
+              .box
+              .p12
+              .border(color: color, width: 3)
+              .make(),
+        ),
         Expanded(
           child: Divider(
             color: color,
