@@ -13,11 +13,11 @@ class AboutMeTextView extends StatelessWidget {
           children: [
             TextSpan(
               text: 'M',
-              style: TextStyle(color: AppColors.primary, fontSize: 50),
+              style: TextStyle(color: AppColors.primary),
             ),
             TextSpan(
               text: 'e',
-              style: TextStyle(color: AppColors.secondary, fontSize: 50),
+              style: TextStyle(color: AppColors.secondary),
             ),
           ]),
     );

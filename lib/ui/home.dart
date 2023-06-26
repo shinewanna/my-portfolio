@@ -24,8 +24,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SelectionArea(
       child: Scaffold(
-        body: ScreenTypeLayout(
-          desktop: Center(
+        body: ScreenTypeLayout.builder(
+          desktop: (_) => Center(
             child: CustomScrollView(
               physics: BouncingScrollPhysics(),
               slivers: [
@@ -145,7 +145,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          mobile: Center(
+          mobile: (_) => Center(
             child: CustomScrollView(
               physics: BouncingScrollPhysics(),
               slivers: [

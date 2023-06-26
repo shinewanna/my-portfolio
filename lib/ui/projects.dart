@@ -24,8 +24,8 @@ class Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      desktop: Padding(
+    return ScreenTypeLayout.builder(
+      desktop: (_) => Padding(
         padding: EdgeInsets.symmetric(vertical: 30),
         child: Column(
           children: [
@@ -38,7 +38,7 @@ class Projects extends StatelessWidget {
           ],
         ),
       ),
-      mobile: Padding(
+      mobile: (_) => Padding(
         padding: EdgeInsets.symmetric(
           vertical: 50,
         ),
@@ -61,8 +61,8 @@ class Projects extends StatelessWidget {
   }
 
   Widget _buildProject(BuildContext context, Project project) =>
-      ScreenTypeLayout(
-        desktop: SizedBox(
+      ScreenTypeLayout.builder(
+        desktop: (_) => SizedBox(
           width: MediaQuery.of(context).size.width * .7,
           child: Column(
             children: [
@@ -120,7 +120,7 @@ class Projects extends StatelessWidget {
             ],
           ),
         ),
-        mobile: SizedBox(
+        mobile: (_) => SizedBox(
           width: MediaQuery.of(context).size.width * .7,
           child: Column(
             children: [

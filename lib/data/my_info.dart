@@ -61,9 +61,9 @@ class MyInfo {
         bullets: [
           'Work closely with Senior Developers',
           'Build simple Java project and deploy using Apache',
-          'Learn OOP, ORM, MVC, Clean Code',
-          'Unit Testing, QA Testing',
-          'Write vim scripts',
+          'Learn OOP, ORM, MVC and Clean Code',
+          'Unit Testing and QA Testing',
+          'Write shell scripts',
         ],
       ),
     ];
@@ -121,6 +121,26 @@ class MyInfo {
 
   void _setProjects() {
     professionalProjects = [
+      Project(
+        name: 'UnifAI',
+        description:
+            '''This is real estate application. Users can add their properties which they want to sale and rent house, apartment, etc. Users can easily search with Map, messaging each other, disable their own property, search their surrounding sale and rent houses.''',
+        image:
+            'https://github-production-user-asset-6210df.s3.amazonaws.com/39454969/248655833-f7e005f6-321d-4e62-9fa0-298d74199f10.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.ypbsystems.unify',
+        appStore: 'https://apps.apple.com/us/app/unifai/id1659586705',
+      ),
+      Project(
+        name: 'MotifMicro',
+        description:
+            '''This is real estate application. Users can add their properties which they want to sale and rent house, apartment, etc. Users can easily search with Map, messaging each other, disable their own property, search their surrounding sale and rent houses.''',
+        image:
+            'https://github-production-user-asset-6210df.s3.amazonaws.com/39454969/248656030-bebcb37e-7020-47ec-9ef8-9e6389defd0b.png',
+        playStore:
+            'https://play.google.com/store/apps/details?id=com.ypbsystems.motifmicro',
+        appStore: 'https://apps.apple.com/us/app/motifmicro/id1607025052',
+      ),
       Project(
         name: 'ChoChoLay House',
         description:

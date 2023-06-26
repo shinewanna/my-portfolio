@@ -100,8 +100,8 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      desktop: Column(
+    return ScreenTypeLayout.builder(
+      desktop: (_) => Column(
         children: [
           LineBoxWidget(
             title: 'GET IN TOUCH',
@@ -175,7 +175,7 @@ class Footer extends StatelessWidget {
           ),
         ],
       ),
-      mobile: Column(
+      mobile: (_) => Column(
         children: [
           LineBoxWidget(
             title: 'GET IN TOUCH',
