@@ -36,10 +36,10 @@ class MyInfo {
         fromTo: 'Apr 2022 - Present',
         bullets: [
           'International working environment',
-          'Develop Unifai, MotifMirco, YPB Tracer apps with Flutter',
+          'Develop UnifAI, MotifMirco, YPB Tracer apps with Flutter',
           'Develop YPB Camera Plugin in Flutter with Swift',
-          'Develop YPB multiple layer custom QR and Green image detector with Python',
-          'Migrate OpenCV in Flutter',
+          'Develop YPB multiple layer custom QR and Green Image Detector with Python',
+          'Migrate OpenCV to use Green Image Detector in Flutter',
           'Agile development',
           'Setting up CI/CD, PlayStore, AppStore, Firebase and GitHub action'
         ],
@@ -124,7 +124,13 @@ class MyInfo {
       Project(
         name: 'UnifAI',
         description:
-            '''This is real estate application. Users can add their properties which they want to sale and rent house, apartment, etc. Users can easily search with Map, messaging each other, disable their own property, search their surrounding sale and rent houses.''',
+            '''The UnifAI app consists of three core features: MotifiMicro, YPB Tracer, and ProtectCode.
+
+MotifiMicro utilizes a unique method to decrypt images captured from the mobile camera and verifies their authenticity.
+
+YPB Tracer enables the integration of YPB's proprietary Tracer Scanner device with the mobile app. The device is connected via Bluetooth, allowing users to control and utilize the scanner to determine the authenticity of products.
+
+ProtectCode verifies the authenticity of products by scanning special QR codes. These QR codes are designed to prevent deep fakes and fraudulent activities.''',
         image:
             'https://github-production-user-asset-6210df.s3.amazonaws.com/39454969/248655833-f7e005f6-321d-4e62-9fa0-298d74199f10.png',
         playStore:
@@ -134,7 +140,7 @@ class MyInfo {
       Project(
         name: 'MotifMicro',
         description:
-            '''This is real estate application. Users can add their properties which they want to sale and rent house, apartment, etc. Users can easily search with Map, messaging each other, disable their own property, search their surrounding sale and rent houses.''',
+            '''MotifiMicro utilizes a unique method to decrypt images captured from the mobile camera and verifies their authenticity.''',
         image:
             'https://github-production-user-asset-6210df.s3.amazonaws.com/39454969/248656030-bebcb37e-7020-47ec-9ef8-9e6389defd0b.png',
         playStore:
@@ -144,7 +150,7 @@ class MyInfo {
       Project(
         name: 'ChoChoLay House',
         description:
-            '''This is real estate application. Users can add their properties which they want to sale and rent house, apartment, etc. Users can easily search with Map, messaging each other, disable their own property, search their surrounding sale and rent houses.''',
+            '''The real estate application allows users to list their properties for sale or rent, including houses, apartments, and more. Users can conveniently search for properties using a map feature, enabling them to find listings in specific locations.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947364-fafc648b-71d4-4793-a79e-68b5c96c9d6f.png',
         playStore:
@@ -154,7 +160,7 @@ class MyInfo {
       Project(
         name: 'ChoChoLay Chat',
         description:
-            '''This is a chatting application like wechat appliction. There's many features, such as Voice call, video call, voice message, friend request and etc. And there's many organization that's you can join, chat and discuss about your business project. Use for social communicating, contant sharing, organization publishing. There's you can add member, add content, update your company detail, the other user will share your app and publish with there community. Business to business helping and managing with this application.''',
+            '''The chatting application is similar to WeChat and offers various features such as voice calls, video calls, voice messages, friend requests, and more. It serves as a social communication platform where users can connect with friends, share content, and engage in discussions.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947375-63b32cd7-7b49-471d-b314-5806f52552fd.png',
         playStore:
