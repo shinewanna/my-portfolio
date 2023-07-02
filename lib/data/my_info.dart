@@ -14,7 +14,7 @@ class MyInfo {
   String getInTouch =
       'You have an idea, I am here to turn your dream into real digital solution.';
   AcadamicDetail acadamicDetail = AcadamicDetail(
-      name: 'University of Computer Studies Yangon', degree: 'B.C.Sc');
+      name: 'University of Computer Studies, Yangon', degree: 'B.C.Sc');
   late List<Experience> exps;
   late List<Project> personalProjects;
   late List<Project> professionalProjects;
@@ -148,6 +148,16 @@ ProtectCode verifies the authenticity of products by scanning special QR codes. 
         appStore: 'https://apps.apple.com/us/app/motifmicro/id1607025052',
       ),
       Project(
+        name: 'YPB Camera framework',
+        description:
+            '''The YPB Camera framework has special features to capture and detect images using Swift. This framework is utilized in the MotifMicro app.''',
+      ),
+      Project(
+        name: 'Protect Code Pro',
+        description:
+            '''To create various types of custom QR codes for a private project without exposing it, I utilized specialized libraries or frameworks with QR code generation capabilities using Python. This allowed me to generate custom QR codes tailored to the project's specific requirements while maintaining confidentiality.''',
+      ),
+      Project(
         name: 'ChoChoLay House',
         description:
             '''The real estate application allows users to list their properties for sale or rent, including houses, apartments, and more. Users can conveniently search for properties using a map feature, enabling them to find listings in specific locations.''',
@@ -233,7 +243,7 @@ Users can personalize their launcher experience by exploring various wallpapers 
       Project(
         name: 'Lazy SMS',
         description:
-            '''Introducing our SMS Scheduler app, a convenient tool that allows users to schedule SMS messages to be sent at a specific time using their preferred SIM card.''',
+            '''Introducing SMS Scheduler app, a convenient tool that allows users to schedule SMS messages to be sent at a specific time using their preferred SIM card.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947380-c1955f89-14f5-44e2-92a3-ed8129f458fe.png',
         playStore:
@@ -242,7 +252,7 @@ Users can personalize their launcher experience by exploring various wallpapers 
       Project(
         name: 'Text Hider',
         description:
-            '''Introducing our Text Encryption app, a powerful tool that allows you to encrypt your text messages and decrypt them within the app. With our app, you can ensure the security and confidentiality of your messages by applying various encryption algorithms.''',
+            '''Introducing Text Encryption app, a powerful tool that allows you to encrypt your text messages and decrypt them within the app. With our app, you can ensure the security and confidentiality of your messages by applying various encryption algorithms.''',
         image:
             'https://user-images.githubusercontent.com/39454969/132947382-1f894bc5-c678-4310-8f74-25f577af7683.png',
         playStore:
@@ -274,7 +284,7 @@ Users can personalize their launcher experience by exploring various wallpapers 
       Project(
         name: 'Background SMS',
         description:
-            'THaving an SMS library for Flutter can be very useful for developers who want to incorporate SMS functionality into their Flutter applications. Being able to send SMS from the foreground, background, and headless mode provides flexibility and convenience.',
+            'Having an SMS library for Flutter can be very useful for developers who want to incorporate SMS functionality into their Flutter applications. Being able to send SMS from the foreground, background, and headless mode provides flexibility and convenience.',
         url: 'https://pub.dev/packages/background_sms',
       ),
       Project(

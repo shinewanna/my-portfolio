@@ -69,22 +69,24 @@ class Projects extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  project.image.isEmptyOrNull
-                      ? Nth()
-                      : Container(
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width * .10,
-                            child: GestureDetector(
-                              onTap: project.playStore.isEmptyOrNull
-                                  ? null
-                                  : () => launch(project.playStore!),
-                              child: FadeInImage.memoryNetwork(
-                                image: project.image!,
-                                placeholder: kTransparentImage,
-                              ).card.roundedSM.make(),
-                            ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .10,
+                    child: project.image.isEmptyOrNull
+                        ? SelectableText(
+                            'No image to display for this particular project.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          )
+                        : GestureDetector(
+                            onTap: project.playStore.isEmptyOrNull
+                                ? null
+                                : () => launch(project.playStore!),
+                            child: FadeInImage.memoryNetwork(
+                              image: project.image!,
+                              placeholder: kTransparentImage,
+                            ).card.roundedSM.make(),
                           ),
-                        ),
+                  ),
                   SizedBox(width: MediaQuery.of(context).size.width * .075),
                   Expanded(
                     child: Column(
