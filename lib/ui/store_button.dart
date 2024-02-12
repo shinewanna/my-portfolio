@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myporfolio/config/colors.dart';
-import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/model/button.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/widget/nth.dart';
@@ -10,7 +9,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class StoreButton extends StatelessWidget {
   final Project project;
-  const StoreButton({Key key, this.project}) : super(key: key);
+  const StoreButton({Key? key, required this.project}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class StoreButton extends StatelessWidget {
     var horPad = 30.0;
     var verPad = 20.0;
     if (deviceType == DeviceScreenType.mobile) {
-      horPad = 10.0;
+      horPad = 15.0;
       verPad = 15.0;
     }
 
@@ -29,23 +28,36 @@ class StoreButton extends StatelessWidget {
 
     _buildButton(Button button) => button.url.isEmptyOrNull
         ? Nth()
-        : OutlineButton(
-            onPressed: () => launch(button.url),
-            color: button.color,
-            borderSide: BorderSide(
-              color: button.color.withOpacity(.5),
-              width: 5,
+        : OutlinedButton(
+            onPressed: () => launch(button.url!),
+            style: ButtonStyle(
+              side: MaterialStateProperty.resolveWith<BorderSide>((states) {
+                return BorderSide(
+                  color: button.color.withOpacity(.5),
+                  width: 5,
+                );
+              }),
+              padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                EdgeInsets.symmetric(
+                  horizontal: horPad,
+                  vertical: verPad,
+                ),
+              ),
+              shape: MaterialStateProperty.all<OutlinedBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              textStyle: MaterialStateProperty.all<TextStyle>(
+                TextStyle(color: Colors.black),
+              ),
             ),
-            padding: EdgeInsets.symmetric(
-              horizontal: horPad,
-              vertical: verPad,
+            child: Text(
+              button.text,
+              style: TextStyle(
+                color: AppColors.text,
+              ),
             ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: deviceType == DeviceScreenType.mobile
-                ? AppStyle.desc(button.text, isSelectableText: false)
-                : AppStyle.subtitle(button.text, isSelectableText: false),
           );
 
     _addUrl(Button(

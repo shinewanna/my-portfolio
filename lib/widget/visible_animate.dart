@@ -5,7 +5,8 @@ class VisibleAnimate extends StatelessWidget {
   final Widget child;
   final String id;
 
-  const VisibleAnimate({Key key, this.child, this.id}) : super(key: key);
+  const VisibleAnimate({Key? key, required this.child, required this.id})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AnimateIfVisible(

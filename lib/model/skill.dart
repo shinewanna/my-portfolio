@@ -1,5 +1,5 @@
 class Skill {
   final String name;
 
-  Skill({this.name});
+  Skill({required this.name});
 }

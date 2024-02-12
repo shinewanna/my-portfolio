@@ -10,9 +10,9 @@ class Header extends StatelessWidget {
         padding: const EdgeInsets.only(left: 25.0),
         child: Row(
           children: [
-            "Portfol".text.color(AppColors.text).bold.xl3.make(),
-            "i".text.bold.color(AppColors.primary).xl3.make(),
-            "o".text.bold.color(AppColors.secondary).xl3.make()
+            'Portfol'.text.color(AppColors.text).bold.xl3.make(),
+            'i'.text.bold.color(AppColors.primary).xl3.make(),
+            'o'.text.bold.color(AppColors.secondary).xl3.make()
           ],
         ),
       ),

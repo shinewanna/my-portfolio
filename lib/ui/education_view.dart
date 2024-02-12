@@ -9,9 +9,9 @@ class EducationView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AppStyle.subtitle("Education"),
+        AppStyle.subtitle('Education'),
         10.heightBox,
-        myInfo.acadamicDetail.name.selectableText.tight.make(),
+        myInfo.acadamicDetail.name.text.make(),
         AppStyle.desc(myInfo.acadamicDetail.degree),
         20.heightBox,
       ],

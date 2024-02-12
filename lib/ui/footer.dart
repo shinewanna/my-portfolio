@@ -32,11 +32,11 @@ class Footer extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          SelectableText(
+          Text(
             myInfo.getInTouch,
             style: TextStyle(
               color: AppColors.text,
-              fontSize: 13,
+              fontSize: 15,
             ),
           ),
           const SizedBox(height: 20),
@@ -57,14 +57,14 @@ class Footer extends StatelessWidget {
                   AppConstants.mail,
                   style: TextStyle(
                     color: AppColors.text,
-                    fontSize: 13,
+                    fontSize: 15,
                   ),
                 ),
               ],
             ),
           ),
           const SizedBox(height: 20),
-          SelectableText(
+          Text(
             'Phone Number',
             style: TextStyle(
               color: AppColors.text,
@@ -72,15 +72,15 @@ class Footer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 7),
-          SelectableText(
+          Text(
             AppConstants.phone,
             style: TextStyle(
               color: AppColors.text,
-              fontSize: 13,
+              fontSize: 15,
             ),
           ),
           const SizedBox(height: 20),
-          SelectableText(
+          Text(
             'Location',
             style: TextStyle(
               color: AppColors.text,
@@ -88,11 +88,11 @@ class Footer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 7),
-          SelectableText(
+          Text(
             AppConstants.location,
             style: TextStyle(
               color: AppColors.text,
-              fontSize: 13,
+              fontSize: 15,
             ),
           )
         ],
@@ -100,8 +100,8 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      desktop: Column(
+    return ScreenTypeLayout.builder(
+      desktop: (_) => Column(
         children: [
           LineBoxWidget(
             title: 'GET IN TOUCH',
@@ -139,11 +139,11 @@ class Footer extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 20),
-                          SelectableText(
+                          Text(
                             myInfo.aboutMe,
                             style: TextStyle(
                               color: AppColors.text,
-                              fontSize: 13,
+                              fontSize: 15,
                             ),
                           ),
                         ],
@@ -161,7 +161,7 @@ class Footer extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SelectableText(
+                    Text(
                       'Proudly powered by Shine Wanna ©${DateTime.now().year}',
                       style: TextStyle(
                         color: AppColors.text.withOpacity(.75),
@@ -175,7 +175,7 @@ class Footer extends StatelessWidget {
           ),
         ],
       ),
-      mobile: Column(
+      mobile: (_) => Column(
         children: [
           LineBoxWidget(
             title: 'GET IN TOUCH',
@@ -206,11 +206,11 @@ class Footer extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    SelectableText(
+                    Text(
                       myInfo.aboutMe,
                       style: TextStyle(
                         color: AppColors.text,
-                        fontSize: 13,
+                        fontSize: 15,
                       ),
                     ),
                   ],
@@ -229,7 +229,7 @@ class Footer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                SelectableText(
+                Text(
                   'Proudly powered by Shine Wanna ©${DateTime.now().year}',
                   style: TextStyle(
                     color: AppColors.text.withOpacity(.75),
