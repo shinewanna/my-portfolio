@@ -99,7 +99,17 @@ class Projects extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .01,
                         ),
-                        AppStyle.desc(project.description),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: project.bullets
+                              .map(
+                                (e) => Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: AppStyle.desc('•  $e'),
+                                ),
+                              )
+                              .toList(),
+                        ),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .025,
                         ),
@@ -146,7 +156,17 @@ class Projects extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
-              AppStyle.desc(project.description),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: project.bullets
+                    .map(
+                      (e) => Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: AppStyle.desc('•  $e'),
+                      ),
+                    )
+                    .toList(),
+              ),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .025,
               ),

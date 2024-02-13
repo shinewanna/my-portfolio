@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            ExpView(),
+                                            Expanded(child: ExpView()),
                                             Expanded(
                                               child: FadeInImage.memoryNetwork(
                                                 image: AppConstants.devImage,
@@ -105,7 +105,7 @@ class Home extends StatelessWidget {
                                                 Expanded(
                                                     child: Padding(
                                                   padding: const EdgeInsets
-                                                          .symmetric(
+                                                      .symmetric(
                                                       horizontal: 100),
                                                   child: SkillView(),
                                                 ))
