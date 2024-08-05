@@ -226,7 +226,6 @@ class MyInfo {
             'https://user-images.githubusercontent.com/39454969/132948581-497ba7d2-b283-49f8-9f38-e90c8c8cacfd.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.share.notification',
-        url: 'https://shinewanna.github.io/sharenotification/',
       ),
       Project(
         name: 'iTube: Video Downloader',
@@ -249,6 +248,16 @@ class MyInfo {
             'https://user-images.githubusercontent.com/39454969/132946754-5e50cf3f-2be4-4bce-83d1-70547d00a163.png',
         playStore:
             'https://play.google.com/store/apps/details?id=com.second.space',
+      ),
+      Project(
+        name: 'FreeFlow VPN',
+        bullets: [
+          'A simple, user-friendly interface makes it easy for anyone to connect to a VPN with just one tap.',
+          'Customize users VPN experience by choosing which apps to include or exclude from the VPN connection.'
+        ],
+        image:
+            'https://github.com/user-attachments/assets/584be620-e979-40c7-946e-2a57c7c1cd42',
+        playStore: 'https://play.google.com/store/apps/details?id=com.swn.vpn',
       ),
       Project(
         name: 'Debt Notes',
