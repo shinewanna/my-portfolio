@@ -44,10 +44,11 @@ class MyInfo {
         ],
       ),
       Experience(
-        role: 'Senior Flutter Developer',
+        role: 'Senior Flutter Developer / Flutter Developer',
         place: 'Asaygo Company',
         fromTo: 'Aug 2019 - Apr 2022',
         bullets: [
+          'Flutter Developer (August 2019 - July 2021) | Senior Flutter Developer (August 2021 - April 2022)',
           'Developed various mobile applications using Flutter, including ChoChoLay Zay, ChoChoLay House, ChoChoLay Chat, and CMTFDN.',
           'Created and published the Multiselectable DropDown widget for Flutter Pub.',
           'Developed Android AutoStart Plugin using Flutter and Android Native (Java) and published it to Flutter Pub.',
