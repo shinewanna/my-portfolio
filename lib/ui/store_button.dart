@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:myporfolio/config/app_utils.dart';
 import 'package:myporfolio/config/colors.dart';
 import 'package:myporfolio/model/button.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/widget/nth.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class StoreButton extends StatelessWidget {
@@ -29,26 +29,26 @@ class StoreButton extends StatelessWidget {
     _buildButton(Button button) => button.url.isEmptyOrNull
         ? Nth()
         : OutlinedButton(
-            onPressed: () => launch(button.url!),
+            onPressed: () => AppUtils.launchLink(button.url!),
             style: ButtonStyle(
-              side: MaterialStateProperty.resolveWith<BorderSide>((states) {
+              side: WidgetStateProperty.resolveWith<BorderSide>((states) {
                 return BorderSide(
                   color: button.color.withOpacity(.5),
                   width: 5,
                 );
               }),
-              padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+              padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
                 EdgeInsets.symmetric(
                   horizontal: horPad,
                   vertical: verPad,
                 ),
               ),
-              shape: MaterialStateProperty.all<OutlinedBorder>(
+              shape: WidgetStateProperty.all<OutlinedBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              textStyle: MaterialStateProperty.all<TextStyle>(
+              textStyle: WidgetStateProperty.all<TextStyle>(
                 TextStyle(color: Colors.black),
               ),
             ),

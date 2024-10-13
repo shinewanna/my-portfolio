@@ -7,7 +7,7 @@ import 'package:myporfolio/model/skill.dart';
 class MyInfo {
   String title = '''I'm Shine Wanna, Mobile Engineer from Bangkok, Thailand.''';
   String objective =
-      'Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\n\nIn addition to my strong problem-solving abilities and experience, I have also participated in international computer programming contests. In one particular contest, our team achieved significant success by winning the First to Solve problem E. Overall, we secured the 8th position in the final results. With this proven track record, I am confident that you will not regret selecting me as a valuable asset to your team.';
+      'I am a passionate Mobile Developer with 5 years of experience in mobile development, specializing in building high-performance, user-centric applications. Coding is my passion, and I am continuously driven to improve my skills and contribute to impactful projects.';
   String aboutMe =
       '''I'm a Mobile Engineer and develop Android, iOS and Web.''';
   String getInTouch =
@@ -17,7 +17,14 @@ class MyInfo {
   late List<Experience> exps;
   late List<Project> personalProjects;
   late List<Project> professionalProjects;
-  late List<Skill> skills;
+  late List<Skill> mobileFrameworks;
+  late List<Skill> otherPlatforms;
+  late List<Skill> databases;
+  late List<Skill> versionControl;
+  late List<Skill> ciCd;
+  late List<Skill> testing;
+  late List<Skill> cloudServices;
+
   late List<Language> langs;
 
   MyInfo() {
@@ -32,82 +39,68 @@ class MyInfo {
       Experience(
         role: 'Mobile Engineer',
         place: 'YPB International Group',
-        fromTo: 'Apr 2022 - Present',
+        fromTo: 'Apr 2022 - Jun 2024',
         bullets: [
-          'Developed and deployed various mobile applications using Flutter, Swift, and Kotlin, including UnifAI, MotifMicro, YPB Tracer.',
-          'Created and managed YPB Camera Plugin and SDK using Swift.',
-          'Implemented YPB multiple layer custom QR and Green Image Detector with Python.',
-          'Migrated OpenCV to utilize Green Image Detector in Flutter.',
-          'Worked in agile development teams and managed tasks using Jira.',
-          'Create task and manage Jira.',
-          'Set up Continuous Integration/Continuous Deployment (CI/CD) pipelines, PlayStore, AppStore, Firebase, and GitHub actions.'
+          'Developed and optimized internal mobile applications like UnifAI and MotifMicro, incorporating custom camera SDKs using native Kotlin and Swift.',
+          'After developing a custom camera SDK, significantly increased the detection accuracy of product authenticity and improved the custom image detection algorithm by over 20%.',
+          'Implemented custom image detection algorithm with Python to enhance the quality of old detection which is used in MotifMicro app.',
+          'Streamlined the app development process by setting up CI/CD pipelines, reducing manual intervention and ensuring faster and error-free releases across Play Store, App Store, and Firebase.',
         ],
       ),
       Experience(
-        role: 'Senior Flutter Developer / Flutter Developer',
+        role: 'Senior Flutter Developer',
         place: 'Asaygo Company',
         fromTo: 'Aug 2019 - Apr 2022',
         bullets: [
-          'Flutter Developer (August 2019 - July 2021) | Senior Flutter Developer (August 2021 - April 2022)',
+          'Built and maintained real estate apps such as ChoChoLay House and chat applications like ChoChoLay Chat, optimizing Firebase services (Authentication, Firestore, Storage) for seamless user experiences.',
           'Developed various mobile applications using Flutter, including ChoChoLay Zay, ChoChoLay House, ChoChoLay Chat, and CMTFDN.',
-          'Created and published the Multiselectable DropDown widget for Flutter Pub.',
-          'Developed Android AutoStart Plugin using Flutter and Android Native (Java) and published it to Flutter Pub.',
-          'Set up CI/CD, PlayStore, AppStore, OneSignal, Firebase, Map, and GitHub actions.',
+          'Implemented GitHub Actions CI/CD, cutting deployment time by 20%.',
         ],
       ),
       Experience(
-        role: 'Software Engineer(Internship)',
+        role: 'Software Engineer',
         place: 'BizLeap Technology',
-        fromTo: 'Apr 2019 - July 2019',
+        fromTo: 'Apr 2019 - Jul 2019',
         bullets: [
-          'Collaborated closely with Senior Developers to learn and apply principles of Object-Oriented Programming (OOP), Object-Relational Mapping (ORM), Model-View-Controller (MVC), and Clean Code.',
-          'Developed simple Java projects and deployed them using Apache.',
-          'Conducted Unit Testing and Quality Assurance (QA) Testing.',
-          'Wrote shell scripts to automate tasks.',
+          'Assisted in developing Java-based projects and deploying them.',
+          'Dirt my hands with shell scripting for automated routine testing, reducing development time by 15%.',
         ],
       ),
     ];
   }
 
   void _setSkills() {
-    skills = [
+    mobileFrameworks = [
       Skill(name: 'Flutter'),
-      Skill(name: 'iOS(Swift)'),
-      Skill(name: 'Android(Java, Kotlin)'),
-      Skill(name: 'Java'),
-      Skill(name: 'Dart'),
-      Skill(name: 'Python'),
-      Skill(name: 'Kaggle'),
-      Skill(name: 'OOP'),
-      Skill(name: 'Architecture Pattern(MVVM, MVC, MVP)'),
-      Skill(name: 'APIs Integration'),
+      Skill(name: 'Android (Java, Kotlin)'),
+      Skill(name: 'iOS (Swift)'),
+    ];
+    otherPlatforms = [
+      Skill(name: 'Flutter (Web, Mac, Windows, Linux)'),
+    ];
+    databases = [
       Skill(name: 'Firebase'),
-      Skill(name: 'OneSignal'),
-      Skill(name: 'Ads Integration'),
-      Skill(name: 'In-app purchase'),
-      Skill(name: 'Dependency Injection'),
-      Skill(name: 'GitHub'),
-      Skill(name: 'GitLab'),
-      Skill(name: 'GitHub Actions'),
+      Skill(name: 'Supabase'),
+      Skill(name: 'SQLite'),
+      Skill(name: 'Hive'),
+    ];
+    versionControl = [
+      Skill(name: 'Git'),
+    ];
+    ciCd = [
       Skill(name: 'CodeMagic'),
-      Skill(name: 'Automation Testing'),
-      Skill(name: 'Mock Test'),
-      Skill(name: 'Shell Scripting'),
-      Skill(name: 'Photoshop'),
-      Skill(name: 'Adobe XD'),
-      Skill(name: 'Flare'),
-      Skill(name: 'MySql'),
-      Skill(name: 'Agora'),
-      Skill(name: 'Sentry'),
-      Skill(name: 'Final Cut Pro'),
-      Skill(name: 'WordPress'),
-      Skill(name: 'Snappa'),
-      Skill(name: 'Appure'),
-      Skill(name: 'OS(Mac, Windows, Linux)'),
-      Skill(name: 'AWS(Flutter)'),
-      Skill(name: 'HTML'),
-      Skill(name: 'CSS'),
-      Skill(name: 'C#'),
+      Skill(name: 'GitHub Actions'),
+    ];
+    testing = [
+      Skill(name: 'Unit'),
+      Skill(name: 'Widget'),
+      Skill(name: 'Integration Test'),
+    ];
+    cloudServices = [
+      Skill(
+          name:
+              'Firebase (Auth, Firestore, Storage, Messaging, Hosting, Cloud Functions)'),
+      Skill(name: 'Supabase (Auth, Relational Database, Storage, Hosting)'),
     ];
   }
 
@@ -279,7 +272,7 @@ class MyInfo {
         image:
             'https://user-images.githubusercontent.com/39454969/132947380-c1955f89-14f5-44e2-92a3-ed8129f458fe.png',
         playStore:
-            'https://play.google.com/store/apps/details?id=com.lazy.message',
+            'https://apkpure.com/lazy-sms-schedule-automatic-message-sender/com.lazy.message/download',
       ),
       Project(
         name: 'Text Hider',
@@ -376,20 +369,6 @@ class MyInfo {
           'Supported and reposonsive for both Android, iOS and Web',
         ],
         url: 'https://github.com/shinewanna/my-portfolio',
-      ),
-      Project(
-        name: 'Food Order app',
-        bullets: [
-          'Built with Android Native.',
-          'Utilized Firebase backend.',
-        ],
-      ),
-      Project(
-        name: 'PixabayHD app',
-        bullets: [
-          'Built with Flutter.',
-          'Utilized open source API.',
-        ],
       ),
     ];
   }

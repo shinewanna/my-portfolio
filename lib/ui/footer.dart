@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mailto/mailto.dart';
+import 'package:myporfolio/config/app_utils.dart';
 import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/data/my_info.dart';
 import 'package:myporfolio/widget/line_box_widget.dart';
@@ -11,10 +11,7 @@ import 'icon.dart';
 
 class Footer extends StatelessWidget {
   void _sendMail() async {
-    final mailto = Mailto(
-      to: [AppConstants.mail],
-    );
-    await launch('$mailto');
+    await launchUrl(Uri(scheme: 'mailto', path: AppConstants.mail));
   }
 
   getInTouch() => Column(
@@ -249,7 +246,7 @@ class Footer extends StatelessWidget {
           width: 35,
           child: InkWell(
             onTap: () {
-              launch(AppConstants.linkedIn);
+              AppUtils.launchLink(AppConstants.linkedIn);
             },
             child: AppIcon(AppConstants.linkedInImage),
           ),
@@ -258,8 +255,8 @@ class Footer extends StatelessWidget {
         SizedBox(
           width: 35,
           child: InkWell(
-            onTap: () async {
-              launch(AppConstants.github);
+            onTap: () {
+              AppUtils.launchLink(AppConstants.github);
             },
             child: AppIcon(AppConstants.githubImage),
           ),
@@ -269,7 +266,7 @@ class Footer extends StatelessWidget {
           width: 35,
           child: InkWell(
             onTap: () {
-              launch(AppConstants.facebook);
+              AppUtils.launchLink(AppConstants.facebook);
             },
             child: AppIcon(AppConstants.facebookImage),
           ),

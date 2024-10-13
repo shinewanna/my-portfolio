@@ -31,16 +31,15 @@ dependencies:
   cupertino_icons: ^1.0.1
   day_night_switcher: ^0.2.0+1
   flutter_staggered_animations: ^1.0.0
-  google_fonts: ^5.1.0
-  mailto: ^2.0.0
+  google_fonts: ^6.2.1
   percent_indicator: ^4.2.3
   responsive_builder: ^0.7.0
   streaming_shared_preferences: ^2.0.0
   transparent_image: ^2.0.0
   url_launcher: ^6.0.3
   url_launcher_web: ^2.0.0
-  velocity_x: ^4.1.0
-  visibility_detector: 0.2.2
+  velocity_x: ^4.2.1
+  visibility_detector: ^0.4.0+2
   
   
   

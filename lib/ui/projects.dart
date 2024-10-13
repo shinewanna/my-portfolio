@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myporfolio/config/app_utils.dart';
 import 'package:myporfolio/config/styles.dart';
 import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/ui/store_button.dart';
@@ -6,7 +7,6 @@ import 'package:myporfolio/widget/line_box_widget.dart';
 import 'package:myporfolio/widget/nth.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:transparent_image/transparent_image.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../config/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -80,7 +80,7 @@ class Projects extends StatelessWidget {
                         : GestureDetector(
                             onTap: project.playStore.isEmptyOrNull
                                 ? null
-                                : () => launch(project.playStore!),
+                                : () => AppUtils.launchLink(project.playStore!),
                             child: FadeInImage.memoryNetwork(
                               image: project.image!,
                               placeholder: kTransparentImage,
@@ -141,7 +141,7 @@ class Projects extends StatelessWidget {
                   : SizedBox(
                       width: MediaQuery.of(context).size.width * .25,
                       child: GestureDetector(
-                        onTap: () => launch(project.playStore!),
+                        onTap: () => AppUtils.launchLink(project.playStore!),
                         child: FadeInImage.memoryNetwork(
                           image: project.image!,
                           placeholder: kTransparentImage,
