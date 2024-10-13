@@ -1,6 +1,6 @@
 class Project {
   final String name;
-  final String description;
+  final List<String> bullets;
   final String? image;
   final String? playStore;
   final String? appStore;
@@ -9,7 +9,7 @@ class Project {
 
   Project(
       {required this.name,
-      required this.description,
+      required this.bullets,
       this.image,
       this.playStore,
       this.appStore,
