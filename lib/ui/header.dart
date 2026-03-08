@@ -89,7 +89,8 @@ class _MobileMenuButton extends StatelessWidget {
           showModalBottomSheet(
             context: context,
             backgroundColor: Colors.transparent,
-            builder: (_) => Container(
+            builder: (_) => SelectionContainer.disabled(
+              child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).scaffoldBackgroundColor,
                 borderRadius:
@@ -147,7 +148,7 @@ class _MobileMenuButton extends StatelessWidget {
                 ],
               ),
             ),
-          );
+          ));
         },
       ),
     );
