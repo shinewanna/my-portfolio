@@ -114,8 +114,8 @@ class MyInfo {
   void _setLangs() {
     langs = [
       Language(name: 'Burmese', proficiency: 1.0),
-      Language(name: 'English', proficiency: .87),
-      Language(name: 'Tamil', proficiency: .87),
+      Language(name: 'English', proficiency: .80),
+      Language(name: 'Tamil', proficiency: .80),
     ];
   }
 
@@ -123,6 +123,7 @@ class MyInfo {
     professionalProjects = [
       Project(
         name: 'UnifAI',
+        techStack: ['Flutter', 'Swift', 'Kotlin', 'Firebase', 'Bluetooth'],
         bullets: [
           'The UnifAI app consists of three core features: MotifiMicro, YPB Tracer, and ProtectCode.',
           'MotifiMicro utilizes a unique method to decrypt images captured from the mobile camera and verifies their authenticity.',
@@ -137,6 +138,7 @@ class MyInfo {
       ),
       Project(
         name: 'MotifMicro',
+        techStack: ['Flutter', 'Swift', 'Kotlin', 'Camera SDK'],
         bullets: [
           'Utilizes a unique method to decrypt images captured from the mobile camera and verifies their authenticity using Custom Camera SDK.',
           'Utilized Android Native Kotlin and Swift to build the camera plugin.'
@@ -149,24 +151,28 @@ class MyInfo {
       ),
       Project(
         name: 'YPB Camera framework',
+        techStack: ['Swift', 'Camera SDK'],
         bullets: [
           'The YPB Camera framework has special features to capture and detect images using Swift.'
         ],
       ),
       Project(
         name: 'YPB Tracer',
+        techStack: ['Flutter', 'Bluetooth'],
         bullets: [
           "Enables the integration of YPB's proprietary Tracer Scanner device with the mobile app via Bluetooth."
         ],
       ),
       Project(
         name: 'Protect Code Pro',
+        techStack: ['Flutter', 'Python', 'QR Code'],
         bullets: [
           'Verifies the authenticity of products by scanning special QR codes generated using Python.'
         ],
       ),
       Project(
         name: 'ChoChoLay House',
+        techStack: ['Flutter', 'Firebase', 'Google Maps'],
         bullets: [
           'Real estate application allowing users to list properties for sale or rent, search for properties using a map feature, and find listings in specific locations.',
           'Utilized Firebase Authentication, Firebase Messaging, Firestore, Firebase Storage, Map Integration.'
@@ -179,6 +185,7 @@ class MyInfo {
       ),
       Project(
         name: 'ChoChoLay Chat',
+        techStack: ['Flutter', 'Firebase', 'Agora'],
         bullets: [
           'Chatting application similar to WeChat, offering features such as voice calls, video calls, voice messages, friend requests, etc.',
           'Utilized Firebase Authentication, Firebase Messaging, Firestore, Firebase Storage.'
@@ -191,6 +198,7 @@ class MyInfo {
       ),
       Project(
         name: 'ChoChoLay Zay',
+        techStack: ['Flutter', 'Firebase'],
         bullets: [
           'ERP application providing a learning platform for junior developers, allowing users to upload items for sale and search for properties.',
           'Utilized Firebase Authentication, Firebase Messaging, Firestore, Firebase Storage.'
@@ -202,6 +210,7 @@ class MyInfo {
       ),
       Project(
         name: 'CMTFDN',
+        techStack: ['Flutter', 'Firebase'],
         bullets: [
           "Ticket scanner app for a social organization's gathering event, allowing entrance ticket holders to attend, scanning tickets, verifying their validity, tracking attendance, and generating attendance reports."
         ],
@@ -216,6 +225,7 @@ class MyInfo {
     personalProjects = [
       Project(
         name: 'Share Notification',
+        techStack: ['Flutter', 'Firebase', 'Cloud Functions'],
         bullets: [
           'This highly popular app boasts an impressive user base of over 100k+ active users.',
           'Facilitates sharing notifications from both installed and system apps.',
@@ -230,6 +240,7 @@ class MyInfo {
       ),
       Project(
         name: 'iTube: Video Downloader',
+        techStack: ['Flutter'],
         bullets: [
           'Popular Video Downloader app with a large user base.',
           'Enables users to download videos and audios from platforms like YouTube, Facebook, Instagram, etc.'
@@ -241,6 +252,7 @@ class MyInfo {
       ),
       Project(
         name: 'Second Space: Launcher',
+        techStack: ['Android', 'Java'],
         bullets: [
           'Offers a solution for hiding apps using the "second space" feature.',
           'Provides a simple and smooth launcher experience for Android phones.'
@@ -252,6 +264,7 @@ class MyInfo {
       ),
       Project(
         name: 'FreeFlow VPN',
+        techStack: ['Flutter', 'Android'],
         bullets: [
           'A simple, user-friendly interface makes it easy for anyone to connect to a VPN with just one tap.',
           'Customize users VPN experience by choosing which apps to include or exclude from the VPN connection.'
@@ -262,6 +275,7 @@ class MyInfo {
       ),
       Project(
         name: 'Debt Notes',
+        techStack: ['Flutter'],
         bullets: [
           'Simplifies the process of managing and tracking debts.',
           'Designed to streamline the management of debts for individuals.'
@@ -273,6 +287,7 @@ class MyInfo {
       ),
       Project(
         name: 'Lazy SMS',
+        techStack: ['Flutter', 'Android'],
         bullets: [
           'Allows users to schedule SMS messages to be sent at specific times using their preferred SIM card.'
         ],
@@ -283,6 +298,7 @@ class MyInfo {
       ),
       Project(
         name: 'Text Hider',
+        techStack: ['Flutter'],
         bullets: [
           'Enables users to encrypt and decrypt text messages within the app.',
           'Provides security and confidentiality for messages using various encryption algorithms.'
@@ -294,6 +310,7 @@ class MyInfo {
       ),
       Project(
         name: 'Annoy Notification',
+        techStack: ['Android', 'Java'],
         bullets: [
           'A virus app built using Android Native, designed to send funny notifications to friends.'
         ],
@@ -304,6 +321,7 @@ class MyInfo {
       ),
       Project(
         name: 'Flare Bottom Navigation',
+        techStack: ['Flutter', 'Flare'],
         bullets: [
           'Custom bottom navigation with animation using Flare Flutter.'
         ],
@@ -312,6 +330,7 @@ class MyInfo {
       ),
       Project(
         name: 'Flare Character',
+        techStack: ['Flare'],
         bullets: ['Animated using Flare.'],
         image:
             'https://user-images.githubusercontent.com/39454969/132947727-199e5fab-1673-44b0-adc2-66a1b6ee4fb3.gif',
@@ -319,6 +338,7 @@ class MyInfo {
       ),
       Project(
         name: 'Flare Character',
+        techStack: ['Flare'],
         bullets: ['Animated using Flare.'],
         image:
             'https://github.com/shinewanna/BackgroundSmsPlugin/assets/39454969/29642316-13f8-42df-afe6-e210213aa10e',
@@ -326,6 +346,7 @@ class MyInfo {
       ),
       Project(
         name: 'Background SMS',
+        techStack: ['Flutter', 'Android', 'Java'],
         bullets: [
           'Flutter Plugin',
           'Provides SMS functionality in Flutter applications, including foreground, background, and headless mode using Android Native.'
@@ -334,6 +355,7 @@ class MyInfo {
       ),
       Project(
         name: 'Android AutoStart',
+        techStack: ['Flutter', 'Android', 'Java'],
         bullets: [
           'Flutter Plugin',
           'Requests to enable AutoStart functionality using Android AutoStart.',
@@ -343,6 +365,7 @@ class MyInfo {
       ),
       Project(
         name: 'Multiselect Dropdown',
+        techStack: ['Flutter'],
         bullets: [
           'Flutter Package',
           'Enhances user experience by adding a multiselecting feature to the Dropdown widget in Flutter.'
@@ -351,6 +374,7 @@ class MyInfo {
       ),
       Project(
         name: 'Example Crypto App',
+        techStack: ['Kotlin', 'Dagger-Hilt', 'Retrofit'],
         bullets: [
           'The is a example app to decmonstrate my proficiency in building a sample app using Kotlin.',
           'Incorporated Dagger-Hilt for dependency injection.',
@@ -361,6 +385,7 @@ class MyInfo {
       ),
       Project(
         name: 'Example Photo App(built two years ago)',
+        techStack: ['Flutter', 'Hive', 'GetX', 'TDD'],
         bullets: [
           'The is a example app to decmonstrate my proficiency in building a sample app using Flutter.',
           'Implemented features using Hive for local data storage.',
@@ -371,6 +396,7 @@ class MyInfo {
       ),
       Project(
         name: 'My Portfolio',
+        techStack: ['Flutter', 'Web'],
         bullets: [
           'Developed using Flutter',
           'Supported and reposonsive for both Android, iOS and Web',
@@ -379,6 +405,7 @@ class MyInfo {
       ),
       Project(
         name: 'Food Order app',
+        techStack: ['Android', 'Firebase'],
         bullets: [
           'Built with Android Native.',
           'Utilized Firebase backend.',
@@ -386,6 +413,7 @@ class MyInfo {
       ),
       Project(
         name: 'PixabayHD app',
+        techStack: ['Flutter', 'REST API'],
         bullets: [
           'Built with Flutter.',
           'Utilized open source API.',

@@ -8,7 +8,7 @@
             "name": "my-portfolio",
             "request": "launch",
             "type": "dart",
-            "args": ["run", "-d", "chrome", "--web-renderer", "html"],
+            "args": ["run", "-d", "chrome"],
         },
         {
             "name": "my-portfolio (profile mode)",
