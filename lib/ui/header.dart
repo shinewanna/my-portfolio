@@ -89,8 +89,8 @@ class _MobileMenuButton extends StatelessWidget {
           showModalBottomSheet(
             context: context,
             backgroundColor: Colors.transparent,
-            builder: (_) => SelectionContainer.disabled(
-              child: Container(
+            useRootNavigator: true,
+            builder: (_) => Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).scaffoldBackgroundColor,
                 borderRadius:
@@ -148,7 +148,7 @@ class _MobileMenuButton extends StatelessWidget {
                 ],
               ),
             ),
-          ));
+          );
         },
       ),
     );
@@ -168,21 +168,18 @@ class _MobileMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      child: ListTile(
-        leading: Icon(icon, color: AppColors.primary),
-        title: Text(
-          label,
-          style: TextStyle(
-            color: AppColors.text,
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-          ),
+    return ListTile(
+      leading: Icon(icon, color: AppColors.primary),
+      title: Text(
+        label,
+        style: TextStyle(
+          color: AppColors.text,
+          fontWeight: FontWeight.w600,
+          fontSize: 16,
         ),
-        onTap: onTap,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 24),
       ),
+      onTap: onTap,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
     );
   }
 }
