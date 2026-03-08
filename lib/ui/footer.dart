@@ -117,12 +117,10 @@ class Footer extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Get in touch
                     Expanded(
                       child: getInTouch(),
                     ),
                     const SizedBox(width: 20),
-                    // Aout me
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,7 +160,7 @@ class Footer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Proudly powered by Shine Wanna ©${DateTime.now().year}',
+                      'Proudly powered by Shine Wanna \u00a9${DateTime.now().year}',
                       style: TextStyle(
                         color: AppColors.text.withOpacity(.75),
                       ),
@@ -190,7 +188,6 @@ class Footer extends StatelessWidget {
               children: [
                 getInTouch(),
                 const SizedBox(height: 30),
-                // Aout me
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -215,7 +212,6 @@ class Footer extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 30),
                 Divider(
                   color: AppColors.text.withOpacity(.75),
@@ -230,7 +226,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  'Proudly powered by Shine Wanna ©${DateTime.now().year}',
+                  'Proudly powered by Shine Wanna \u00a9${DateTime.now().year}',
                   style: TextStyle(
                     color: AppColors.text.withOpacity(.75),
                   ),
@@ -245,34 +241,55 @@ class Footer extends StatelessWidget {
   }
 
   List<Widget> _socialMedia() => [
-        SizedBox(
-          width: 35,
-          child: InkWell(
-            onTap: () {
-              launch(AppConstants.linkedIn);
-            },
-            child: AppIcon(AppConstants.linkedInImage),
-          ),
+        _SocialIcon(
+          icon: AppConstants.linkedInImage,
+          url: AppConstants.linkedIn,
         ),
-        const SizedBox(width: 20),
-        SizedBox(
-          width: 35,
-          child: InkWell(
-            onTap: () async {
-              launch(AppConstants.github);
-            },
-            child: AppIcon(AppConstants.githubImage),
-          ),
+        const SizedBox(width: 16),
+        _SocialIcon(
+          icon: AppConstants.githubImage,
+          url: AppConstants.github,
         ),
-        const SizedBox(width: 20),
-        SizedBox(
-          width: 35,
-          child: InkWell(
-            onTap: () {
-              launch(AppConstants.facebook);
-            },
-            child: AppIcon(AppConstants.facebookImage),
-          ),
+        const SizedBox(width: 16),
+        _SocialIcon(
+          icon: AppConstants.facebookImage,
+          url: AppConstants.facebook,
         ),
       ];
+}
+
+class _SocialIcon extends StatefulWidget {
+  final String icon;
+  final String url;
+
+  const _SocialIcon({required this.icon, required this.url});
+
+  @override
+  State<_SocialIcon> createState() => _SocialIconState();
+}
+
+class _SocialIconState extends State<_SocialIcon> {
+  bool _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: GestureDetector(
+        onTap: () => launch(widget.url),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: _isHovered
+                ? AppColors.primary.withOpacity(0.2)
+                : AppColors.primary.withOpacity(0.08),
+          ),
+          child: AppIcon(widget.icon, size: 20),
+        ),
+      ),
+    );
+  }
 }

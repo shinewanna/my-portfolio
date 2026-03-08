@@ -9,4 +9,20 @@ mixin AppColors {
 
   static get text =>
       CacheService.settings.darkMode.getValue() ? Colors.white70 : Vx.gray700;
+
+  static Color get cardBackground =>
+      CacheService.settings.darkMode.getValue()
+          ? Colors.white.withOpacity(0.05)
+          : Colors.white;
+
+  static Color get cardShadowColor =>
+      CacheService.settings.darkMode.getValue()
+          ? Colors.black26
+          : Colors.grey.withOpacity(0.15);
+
+  static LinearGradient get primaryGradient => LinearGradient(
+        colors: [primary, secondary],
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+      );
 }

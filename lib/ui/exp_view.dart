@@ -11,29 +11,68 @@ class ExpView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: myInfo.exps
-          .map((e) => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  AppStyle.subtitle(e.role + ' at ${e.place}'),
-                  3.heightBox,
-                  e.fromTo.text.color(AppColors.text).make(),
-                  7.heightBox,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: e.bullets
-                        .map(
-                          (e) => Padding(
-                            padding: const EdgeInsets.all(0.0),
-                            child: AppStyle.desc('• $e'),
-                          ),
-                        )
-                        .toList(),
+      children: myInfo.exps.asMap().entries.map((entry) {
+        final index = entry.key;
+        final e = entry.value;
+        final isLast = index == myInfo.exps.length - 1;
+
+        return Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: Container(
+                  width: 12,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: AppColors.primaryGradient,
                   ),
-                  20.heightBox,
-                ],
-              ))
-          .toList(),
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppStyle.subtitle(e.role + ' at ${e.place}'),
+                    6.heightBox,
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: AppColors.primary.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        e.fromTo,
+                        style: TextStyle(
+                          color: AppColors.primary,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    10.heightBox,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: e.bullets
+                          .map(
+                            (e) => Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 2),
+                              child: AppStyle.desc('• $e'),
+                            ),
+                          )
+                          .toList(),
+                    ),
+                    24.heightBox,
+                  ],
+                ),
+              ),
+            ],
+        );
+      }).toList(),
     );
   }
 }
