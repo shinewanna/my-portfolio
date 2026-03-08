@@ -97,8 +97,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return SelectionArea(
-      child: Scaffold(
+    return Scaffold(
         body: ScreenTypeLayout.builder(
           desktop: (_) => Center(
             child: CustomScrollView(
@@ -377,7 +376,7 @@ class _HomeState extends State<Home> {
             ).height(70).roundedFull.shadow5xl.make(),
           ],
         ),
-      ),
     );
   }
 }
+
