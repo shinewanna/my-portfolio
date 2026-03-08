@@ -51,9 +51,134 @@ class Header extends StatelessWidget {
               ],
             ),
           ),
-          mobile: (_) => const SizedBox.shrink(),
+          mobile: (_) => _MobileMenuButton(
+            onAbout: onAbout,
+            onExperience: onExperience,
+            onSkills: onSkills,
+            onProjects: onProjects,
+            onContact: onContact,
+          ),
         ),
       ],
+    );
+  }
+}
+
+class _MobileMenuButton extends StatelessWidget {
+  final VoidCallback? onAbout;
+  final VoidCallback? onExperience;
+  final VoidCallback? onSkills;
+  final VoidCallback? onProjects;
+  final VoidCallback? onContact;
+
+  const _MobileMenuButton({
+    this.onAbout,
+    this.onExperience,
+    this.onSkills,
+    this.onProjects,
+    this.onContact,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 8),
+      child: IconButton(
+        icon: Icon(Icons.menu, color: AppColors.text),
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            backgroundColor: Colors.transparent,
+            builder: (_) => Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).scaffoldBackgroundColor,
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(20)),
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 40,
+                    height: 4,
+                    margin: const EdgeInsets.only(bottom: 16),
+                    decoration: BoxDecoration(
+                      color: AppColors.primary.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                  _MobileMenuItem(
+                      label: 'About',
+                      icon: Icons.person_outline,
+                      onTap: () {
+                        Navigator.pop(context);
+                        onAbout?.call();
+                      }),
+                  _MobileMenuItem(
+                      label: 'Experience',
+                      icon: Icons.work_outline,
+                      onTap: () {
+                        Navigator.pop(context);
+                        onExperience?.call();
+                      }),
+                  _MobileMenuItem(
+                      label: 'Skills',
+                      icon: Icons.code,
+                      onTap: () {
+                        Navigator.pop(context);
+                        onSkills?.call();
+                      }),
+                  _MobileMenuItem(
+                      label: 'Projects',
+                      icon: Icons.apps_rounded,
+                      onTap: () {
+                        Navigator.pop(context);
+                        onProjects?.call();
+                      }),
+                  _MobileMenuItem(
+                      label: 'Contact',
+                      icon: Icons.mail_outline,
+                      onTap: () {
+                        Navigator.pop(context);
+                        onContact?.call();
+                      }),
+                  const SizedBox(height: 8),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _MobileMenuItem extends StatelessWidget {
+  final String label;
+  final IconData icon;
+  final VoidCallback onTap;
+
+  const _MobileMenuItem({
+    required this.label,
+    required this.icon,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(icon, color: AppColors.primary),
+      title: Text(
+        label,
+        style: TextStyle(
+          color: AppColors.text,
+          fontWeight: FontWeight.w600,
+          fontSize: 16,
+        ),
+      ),
+      onTap: onTap,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
     );
   }
 }
