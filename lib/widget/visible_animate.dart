@@ -16,11 +16,17 @@ class VisibleAnimate extends StatelessWidget {
         Animation<double> animation,
       ) =>
           FadeTransition(
-        opacity: Tween<double>(
-          begin: 0,
-          end: 1,
-        ).animate(animation),
-        child: child,
+        opacity: Tween<double>(begin: 0, end: 1).animate(animation),
+        child: SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(0, 0.08),
+            end: Offset.zero,
+          ).animate(CurvedAnimation(
+            parent: animation,
+            curve: Curves.easeOut,
+          )),
+          child: child,
+        ),
       ),
     );
   }

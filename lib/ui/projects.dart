@@ -5,6 +5,7 @@ import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/ui/store_button.dart';
 import 'package:myporfolio/widget/hover_scale.dart';
 import 'package:myporfolio/widget/line_box_widget.dart';
+import 'package:myporfolio/widget/shimmer_placeholder.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -127,6 +128,27 @@ class Projects extends StatelessWidget {
                             project.image!,
                             webHtmlElementStrategy:
                                 WebHtmlElementStrategy.prefer,
+                            loadingBuilder: (context, child, progress) {
+                              if (progress == null) return child;
+                              return ShimmerPlaceholder(
+                                width:
+                                    MediaQuery.of(context).size.width * .12,
+                                height: 100,
+                              );
+                            },
+                            errorBuilder: (context, error, stack) =>
+                                Container(
+                              height: 100,
+                              decoration: BoxDecoration(
+                                color: AppColors.primary.withOpacity(0.1),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Icon(
+                                Icons.broken_image_outlined,
+                                color: AppColors.primary.withOpacity(0.5),
+                                size: 40,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -192,6 +214,25 @@ class Projects extends StatelessWidget {
                     child: Image.network(
                       project.image!,
                       webHtmlElementStrategy: WebHtmlElementStrategy.prefer,
+                      loadingBuilder: (context, child, progress) {
+                        if (progress == null) return child;
+                        return ShimmerPlaceholder(
+                          width: MediaQuery.of(context).size.width * .25,
+                          height: 80,
+                        );
+                      },
+                      errorBuilder: (context, error, stack) => Container(
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: AppColors.primary.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(
+                          Icons.broken_image_outlined,
+                          color: AppColors.primary.withOpacity(0.5),
+                          size: 30,
+                        ),
+                      ),
                     ),
                   ),
                 ),

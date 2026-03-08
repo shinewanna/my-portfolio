@@ -97,8 +97,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return SelectionArea(
-      child: Scaffold(
+    return Scaffold(
         body: ScreenTypeLayout.builder(
           desktop: (_) => Center(
             child: CustomScrollView(
@@ -252,7 +251,13 @@ class _HomeState extends State<Home> {
               controller: _scrollController,
               physics: const BouncingScrollPhysics(),
               slivers: [
-                Header(),
+                Header(
+                  onAbout: () => _scrollTo(_aboutKey),
+                  onExperience: () => _scrollTo(_expKey),
+                  onSkills: () => _scrollTo(_skillsKey),
+                  onProjects: () => _scrollTo(_projectsKey),
+                  onContact: () => _scrollTo(_contactKey),
+                ),
                 SliverPadding(
                   padding: const EdgeInsets.all(40.0),
                   sliver: SliverToBoxAdapter(
@@ -271,18 +276,28 @@ class _HomeState extends State<Home> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Center(
-                                            child: _buildProfileImage()),
+                                        Container(
+                                          key: _aboutKey,
+                                          child: Center(
+                                              child: _buildProfileImage()),
+                                        ),
                                         20.heightBox,
                                         AboutMeTextView(),
                                         AppStyle.subtitle(myInfo.title),
                                         10.heightBox,
                                         AppStyle.desc(myInfo.objective),
                                         20.heightBox,
-                                        AppStyle.title('Experience'),
+                                        Container(
+                                          key: _expKey,
+                                          child:
+                                              AppStyle.title('Experience'),
+                                        ),
                                         10.heightBox,
                                         ExpView(),
-                                        SkillView(),
+                                        Container(
+                                          key: _skillsKey,
+                                          child: SkillView(),
+                                        ),
                                         30.heightBox,
                                         EducationView(),
                                         20.heightBox,
@@ -293,12 +308,15 @@ class _HomeState extends State<Home> {
                                 ],
                               ),
                             ),
-                            VisibleAnimate(
-                              id: 'mobile_professional',
-                              child: Projects(
-                                title: 'Professional Projects',
-                                projects: myInfo.professionalProjects,
-                                titleBorderColor: AppColors.secondary,
+                            Container(
+                              key: _projectsKey,
+                              child: VisibleAnimate(
+                                id: 'mobile_professional',
+                                child: Projects(
+                                  title: 'Professional Projects',
+                                  projects: myInfo.professionalProjects,
+                                  titleBorderColor: AppColors.secondary,
+                                ),
                               ),
                             ),
                             VisibleAnimate(
@@ -309,9 +327,12 @@ class _HomeState extends State<Home> {
                                 titleBorderColor: AppColors.primary,
                               ),
                             ),
-                            VisibleAnimate(
-                              id: 'mobile_cta',
-                              child: const CtaSection(),
+                            Container(
+                              key: _contactKey,
+                              child: VisibleAnimate(
+                                id: 'mobile_cta',
+                                child: const CtaSection(),
+                              ),
                             ),
                             VisibleAnimate(
                               id: 'mobile_footer',
@@ -355,7 +376,7 @@ class _HomeState extends State<Home> {
             ).height(70).roundedFull.shadow5xl.make(),
           ],
         ),
-      ),
     );
   }
 }
+
