@@ -168,18 +168,21 @@ class _MobileMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(icon, color: AppColors.primary),
-      title: Text(
-        label,
-        style: TextStyle(
-          color: AppColors.text,
-          fontWeight: FontWeight.w600,
-          fontSize: 16,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: ListTile(
+        leading: Icon(icon, color: AppColors.primary),
+        title: Text(
+          label,
+          style: TextStyle(
+            color: AppColors.text,
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+          ),
         ),
+        onTap: onTap,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 24),
       ),
-      onTap: onTap,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
     );
   }
 }
