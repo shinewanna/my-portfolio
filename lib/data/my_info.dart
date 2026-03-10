@@ -5,9 +5,11 @@ import 'package:myporfolio/model/project.dart';
 import 'package:myporfolio/model/skill.dart';
 
 class MyInfo {
-  String title = '''I'm Shine Wanna, Mobile Engineer from Bangkok, Thailand.''';
+  String title =
+      '''I'm Shine Wanna, Senior Mobile Engineer from Bangkok, Thailand.''';
   String objective =
-      'Coding is my passion, and I am driven to become an accomplished Mobile Software Developer.\n\nIn addition to my strong problem-solving abilities and experience, I have also participated in international computer programming contests. In one particular contest, our team achieved significant success by winning the First to Solve problem E. Overall, we secured the 8th position in the final results. With this proven track record, I am confident that you will not regret selecting me as a valuable asset to your team.';
+      "I am a passionate software engineer with 7 years of experience building cross-platform applications. My primary expertise is in Flutter, along with native iOS and Android development, focusing on scalable architecture, performance optimization, and delivering high-quality production applications.\n\n"
+      "I enjoy solving complex engineering problems and continuously improving my technical skills. In addition to professional experience, I have participated in international programming contests where our team achieved the 'First to Solve' award for problem E and secured 8th place overall. These experiences strengthened my analytical thinking, teamwork, and problem-solving abilities.";
   String aboutMe =
       '''I'm a Mobile Engineer and develop Android, iOS and Web.''';
   String getInTouch =
@@ -82,8 +84,8 @@ class MyInfo {
         ],
       ),
       Experience(
-        role: 'Software Engineer(Internship)',
-        place: 'BizLeap Technology',
+        role: 'Software Engineer',
+        place: 'BizLeap Technology (Internship)',
         fromTo: 'Apr 2019 - July 2019',
         bullets: [
           'Collaborated closely with Senior Developers to learn and apply principles of Object-Oriented Programming (OOP), Object-Relational Mapping (ORM), Model-View-Controller (MVC), and Clean Code.',
@@ -97,43 +99,91 @@ class MyInfo {
 
   void _setSkills() {
     skills = [
+      // Flutter & Cross Platform
       Skill(name: 'Flutter'),
-      Skill(name: 'iOS(Swift)'),
-      Skill(name: 'Android(Java, Kotlin)'),
-      Skill(name: 'Java'),
+      Skill(name: 'Flutter Web'),
       Skill(name: 'Dart'),
-      Skill(name: 'Python'),
-      Skill(name: 'Kaggle'),
+
+      // Native Development
+      Skill(name: 'iOS (Swift)'),
+      Skill(name: 'Android (Java, Kotlin)'),
+
+      // Architecture & Patterns
+      Skill(name: 'Clean Architecture'),
       Skill(name: 'OOP'),
-      Skill(name: 'Architecture Pattern(MVVM, MVC, MVP)'),
-      Skill(name: 'APIs Integration'),
-      Skill(name: 'Firebase'),
-      Skill(name: 'OneSignal'),
-      Skill(name: 'Ads Integration'),
-      Skill(name: 'In-app purchase'),
+      Skill(name: 'Architectural Patterns (MVVM, MVC, MVP)'),
+      Skill(name: 'Repository Pattern'),
+
+      // State Management
+      Skill(name: 'Bloc / Flutter Bloc'),
+      Skill(name: 'HydratedBloc'),
+
+      // Dependency Injection
       Skill(name: 'Dependency Injection'),
+      Skill(name: 'GetIt'),
+
+      // Navigation
+      Skill(name: 'AutoRoute'),
+      Skill(name: 'Deep Linking'),
+
+      // Networking
+      Skill(name: 'Dio'),
+      Skill(name: 'REST API Integration'),
+      Skill(name: 'JSON Parsing'),
+
+      // Backend & Cloud
+      Skill(name: 'Firebase'),
+      Skill(name: 'Firebase Crashlytics'),
+      Skill(name: 'Firebase Cloud Messaging'),
+      Skill(name: 'Push Notifications'),
+      Skill(name: 'OneSignal'),
+
+      // Real-time & Communication
+      Skill(name: 'Agora'),
+
+      // Monitoring & Analytics
+      Skill(name: 'Sentry'),
+      Skill(name: 'Microsoft Clarity'),
+
+      // CI/CD & DevOps
+      Skill(name: 'Git'),
       Skill(name: 'GitHub'),
       Skill(name: 'GitLab'),
       Skill(name: 'GitHub Actions'),
       Skill(name: 'CodeMagic'),
+      Skill(name: 'CI/CD Pipelines'),
+
+      // Testing
+      Skill(name: 'Unit Testing'),
       Skill(name: 'Automation Testing'),
-      Skill(name: 'Mock Test'),
-      Skill(name: 'Shell Scripting'),
-      Skill(name: 'Photoshop'),
-      Skill(name: 'Adobe XD'),
-      Skill(name: 'Flare'),
-      Skill(name: 'MySql'),
-      Skill(name: 'Agora'),
-      Skill(name: 'Sentry'),
-      Skill(name: 'Final Cut Pro'),
-      Skill(name: 'WordPress'),
-      Skill(name: 'Snappa'),
-      Skill(name: 'Appure'),
-      Skill(name: 'OS(Mac, Windows, Linux)'),
-      Skill(name: 'AWS(Flutter)'),
+
+      // Backend / Data
+      Skill(name: 'Python'),
+      Skill(name: 'MySQL'),
+
+      // Web
       Skill(name: 'HTML'),
       Skill(name: 'CSS'),
-      Skill(name: 'C#'),
+
+      // Other Tools
+      Skill(name: 'Shell Scripting'),
+      Skill(name: 'Kaggle'),
+      Skill(name: 'AWS (Flutter)'),
+
+      // Systems
+      Skill(name: 'Operating Systems (macOS, Windows, Linux)'),
+
+      // Design Tools
+      Skill(name: 'Adobe Photoshop'),
+      Skill(name: 'Adobe XD'),
+      Skill(name: 'Flare'),
+
+      // Media & Content
+      Skill(name: 'Final Cut Pro'),
+
+      // CMS & Marketing
+      Skill(name: 'WordPress'),
+      Skill(name: 'Snappa'),
     ];
   }
 
