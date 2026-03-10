@@ -30,9 +30,35 @@ class MyInfo {
   void _setExps() {
     exps = [
       Experience(
+        role: 'Senior Frontend Engineer',
+        place: 'Wyzauto',
+        fromTo: 'Jan 2025 - Present',
+        bullets: [
+          'Refactored a large legacy Flutter application by introducing Clean Architecture with Bloc for state management and GetIt for dependency injection.',
+          'Replaced legacy navigation with AutoRoute, enabling deep linking, browser URL synchronization, and improved web routing behavior.',
+          'Designed a scalable API layer using Dio with interceptors, repository pattern, structured models, and robust error handling.',
+          'Implemented CI/CD pipelines using CodeMagic for Android, iOS, and Web including Firebase App Distribution and TestFlight.',
+          'Built dynamic link handling and custom deep link solution after Firebase Dynamic Links deprecation.',
+          'Optimized performance by introducing HydratedBloc caching, reducing Firebase subscriptions and improving app refresh behavior.',
+          'Developed multiple product features including search system, cart, checkout flow, order management, user management, and shop management.',
+          'Integrated monitoring and analytics tools including Firebase Crashlytics, Sentry, and Microsoft Clarity for error tracking and user behavior insights.',
+        ],
+      ),
+      Experience(
+        role: 'Mobile Developer',
+        place: 'Eleware Technology (Contract)',
+        fromTo: 'Oct 2024 - Dec 2024',
+        bullets: [
+          'Developed the NotifierSE mobile application using Flutter and Firebase.',
+          'Implemented maintenance alarm scheduling for assets such as inspections and periodic servicing.',
+          'Integrated Firebase services including Authentication, Firestore, and Cloud Messaging.',
+          'Developed real-time chat functionality using Firebase.',
+        ],
+      ),
+      Experience(
         role: 'Mobile Engineer',
         place: 'YPB International Group',
-        fromTo: 'Apr 2022 - Present',
+        fromTo: 'Apr 2022 - Jul 2024',
         bullets: [
           'Developed and deployed various mobile applications using Flutter, Swift, and Kotlin, including UnifAI, MotifMicro, YPB Tracer.',
           'Created and managed YPB Camera Plugin and SDK using Swift.',
