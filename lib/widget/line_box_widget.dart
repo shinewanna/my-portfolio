@@ -18,7 +18,7 @@ class LineBoxWidget extends StatelessWidget {
             height: 1,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [color.withOpacity(0), color],
+                colors: [color.withValues(alpha: 0), color],
               ),
             ),
           ),
@@ -66,7 +66,7 @@ class LineBoxWidget extends StatelessWidget {
             height: 1,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [color, color.withOpacity(0)],
+                colors: [color, color.withValues(alpha: 0)],
               ),
             ),
           ),

@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
         gradient: AppColors.primaryGradient,
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withOpacity(0.3),
+            color: AppColors.primary.withValues(alpha: 0.3),
             blurRadius: 20,
             spreadRadius: 2,
           ),

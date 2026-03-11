@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 ),
           ),
           primaryColor: AppColors.primary,
-          appBarTheme: AppBarTheme(color: Colors.transparent),
+          appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
           brightness: Brightness.dark,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         );
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           primaryColor: AppColors.primary,
           brightness: Brightness.light,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          appBarTheme: AppBarTheme(color: Colors.transparent),
+          appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
         );
     return PreferenceBuilder<bool>(
         preference: CacheService.settings.darkMode,

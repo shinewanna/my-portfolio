@@ -109,19 +109,19 @@ class Projects extends StatelessWidget {
                     ? Container(
                         height: 100,
                         decoration: BoxDecoration(
-                          color: AppColors.primary.withOpacity(0.1),
+                          color: AppColors.primary.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Icon(
                           Icons.apps_rounded,
-                          color: AppColors.primary.withOpacity(0.5),
+                          color: AppColors.primary.withValues(alpha: 0.5),
                           size: 40,
                         ),
                       )
                     : GestureDetector(
                         onTap: project.playStore.isEmptyOrNull
                             ? null
-                            : () => launch(project.playStore!),
+                            : () => launchUrl(Uri.parse(project.playStore!)),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12),
                           child: Image.network(
@@ -140,12 +140,12 @@ class Projects extends StatelessWidget {
                                 Container(
                               height: 100,
                               decoration: BoxDecoration(
-                                color: AppColors.primary.withOpacity(0.1),
+                                color: AppColors.primary.withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Icon(
                                 Icons.broken_image_outlined,
-                                color: AppColors.primary.withOpacity(0.5),
+                                color: AppColors.primary.withValues(alpha: 0.5),
                                 size: 40,
                               ),
                             ),
@@ -208,7 +208,7 @@ class Projects extends StatelessWidget {
                 child: GestureDetector(
                   onTap: project.playStore.isEmptyOrNull
                       ? null
-                      : () => launch(project.playStore!),
+                      : () => launchUrl(Uri.parse(project.playStore!)),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.network(
@@ -224,12 +224,12 @@ class Projects extends StatelessWidget {
                       errorBuilder: (context, error, stack) => Container(
                         height: 80,
                         decoration: BoxDecoration(
-                          color: AppColors.primary.withOpacity(0.1),
+                          color: AppColors.primary.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Icon(
                           Icons.broken_image_outlined,
-                          color: AppColors.primary.withOpacity(0.5),
+                          color: AppColors.primary.withValues(alpha: 0.5),
                           size: 30,
                         ),
                       ),

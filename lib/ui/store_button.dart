@@ -29,26 +29,26 @@ class StoreButton extends StatelessWidget {
     _buildButton(Button button) => button.url.isEmptyOrNull
         ? Nth()
         : OutlinedButton(
-            onPressed: () => launch(button.url!),
+            onPressed: () => launchUrl(Uri.parse(button.url!)),
             style: ButtonStyle(
-              side: MaterialStateProperty.resolveWith<BorderSide>((states) {
+              side: WidgetStateProperty.resolveWith<BorderSide>((states) {
                 return BorderSide(
-                  color: button.color.withOpacity(.5),
+                  color: button.color.withValues(alpha: .5),
                   width: 5,
                 );
               }),
-              padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+              padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
                 EdgeInsets.symmetric(
                   horizontal: horPad,
                   vertical: verPad,
                 ),
               ),
-              shape: MaterialStateProperty.all<OutlinedBorder>(
+              shape: WidgetStateProperty.all<OutlinedBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              textStyle: MaterialStateProperty.all<TextStyle>(
+              textStyle: WidgetStateProperty.all<TextStyle>(
                 TextStyle(color: Colors.black),
               ),
             ),

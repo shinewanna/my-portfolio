@@ -14,7 +14,7 @@ class Footer extends StatelessWidget {
     final mailto = Mailto(
       to: [AppConstants.mail],
     );
-    await launch('$mailto');
+    await launchUrl(Uri.parse('$mailto'));
   }
 
   getInTouch() => Column(
@@ -152,7 +152,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
                 Divider(
-                  color: AppColors.text.withOpacity(.75),
+                  color: AppColors.text.withValues(alpha: .75),
                   thickness: .5,
                 ),
                 const SizedBox(height: 20),
@@ -162,7 +162,7 @@ class Footer extends StatelessWidget {
                     Text(
                       'Proudly powered by Shine Wanna \u00a9${DateTime.now().year}',
                       style: TextStyle(
-                        color: AppColors.text.withOpacity(.75),
+                        color: AppColors.text.withValues(alpha: .75),
                       ),
                     ),
                     Row(children: _socialMedia()),
@@ -214,7 +214,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
                 Divider(
-                  color: AppColors.text.withOpacity(.75),
+                  color: AppColors.text.withValues(alpha: .75),
                   thickness: .5,
                 ),
                 const SizedBox(height: 20),
@@ -228,7 +228,7 @@ class Footer extends StatelessWidget {
                 Text(
                   'Proudly powered by Shine Wanna \u00a9${DateTime.now().year}',
                   style: TextStyle(
-                    color: AppColors.text.withOpacity(.75),
+                    color: AppColors.text.withValues(alpha: .75),
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -277,15 +277,15 @@ class _SocialIconState extends State<_SocialIcon> {
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
       child: GestureDetector(
-        onTap: () => launch(widget.url),
+        onTap: () => launchUrl(Uri.parse(widget.url)),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: _isHovered
-                ? AppColors.primary.withOpacity(0.2)
-                : AppColors.primary.withOpacity(0.08),
+                ? AppColors.primary.withValues(alpha: 0.2)
+                : AppColors.primary.withValues(alpha: 0.08),
           ),
           child: AppIcon(widget.icon, size: 20),
         ),

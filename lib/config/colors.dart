@@ -12,13 +12,13 @@ mixin AppColors {
 
   static Color get cardBackground =>
       CacheService.settings.darkMode.getValue()
-          ? Colors.white.withOpacity(0.05)
+          ? Colors.white.withValues(alpha: 0.05)
           : Colors.white;
 
   static Color get cardShadowColor =>
       CacheService.settings.darkMode.getValue()
           ? Colors.black26
-          : Colors.grey.withOpacity(0.15);
+          : Colors.grey.withValues(alpha: 0.15);
 
   static LinearGradient get primaryGradient => LinearGradient(
         colors: [primary, secondary],
