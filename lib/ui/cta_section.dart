@@ -10,7 +10,7 @@ class CtaSection extends StatelessWidget {
 
   void _sendMail() async {
     final mailto = Mailto(to: [AppConstants.mail]);
-    await launch('$mailto');
+    await launchUrl(Uri.parse('$mailto'));
   }
 
   @override

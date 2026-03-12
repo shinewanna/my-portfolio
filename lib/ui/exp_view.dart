@@ -12,9 +12,7 @@ class ExpView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: myInfo.exps.asMap().entries.map((entry) {
-        final index = entry.key;
         final e = entry.value;
-        final isLast = index == myInfo.exps.length - 1;
 
         return Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +39,7 @@ class ExpView extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: AppColors.primary.withOpacity(0.1),
+                        color: AppColors.primary.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(

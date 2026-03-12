@@ -50,9 +50,9 @@ class _ShimmerPlaceholderState extends State<ShimmerPlaceholder>
               begin: Alignment(-1.0 + 2.0 * _controller.value, 0),
               end: Alignment(-1.0 + 2.0 * _controller.value + 1.0, 0),
               colors: [
-                AppColors.primary.withOpacity(0.06),
-                AppColors.primary.withOpacity(0.14),
-                AppColors.primary.withOpacity(0.06),
+                AppColors.primary.withValues(alpha: 0.06),
+                AppColors.primary.withValues(alpha: 0.14),
+                AppColors.primary.withValues(alpha: 0.06),
               ],
             ),
           ),

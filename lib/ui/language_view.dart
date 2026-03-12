@@ -13,7 +13,7 @@ class LanguageView extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.primary.withOpacity(0.2)),
+        border: Border.all(color: AppColors.primary.withValues(alpha: 0.2)),
         color: AppColors.cardBackground,
       ),
       child: Column(
@@ -51,7 +51,7 @@ class LanguageView extends StatelessWidget {
                         width: 208.0,
                         lineHeight: 8.0,
                         percent: e.proficiency,
-                        backgroundColor: AppColors.primary.withOpacity(0.1),
+                        backgroundColor: AppColors.primary.withValues(alpha: 0.1),
                         linearGradient: AppColors.primaryGradient,
                         animation: true,
                         animationDuration: 1000,

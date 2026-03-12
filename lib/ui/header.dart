@@ -24,7 +24,7 @@ class Header extends StatelessWidget {
     return SliverAppBar(
       pinned: true,
       backgroundColor:
-          Theme.of(context).scaffoldBackgroundColor.withOpacity(0.95),
+          Theme.of(context).scaffoldBackgroundColor.withValues(alpha: 0.95),
       surfaceTintColor: Colors.transparent,
       title: Padding(
         padding: const EdgeInsets.only(left: 25.0),
@@ -105,7 +105,7 @@ class _MobileMenuButton extends StatelessWidget {
                     height: 4,
                     margin: const EdgeInsets.only(bottom: 16),
                     decoration: BoxDecoration(
-                      color: AppColors.primary.withOpacity(0.3),
+                      color: AppColors.primary.withValues(alpha: 0.3),
                       borderRadius: BorderRadius.circular(2),
                     ),
                   ),
