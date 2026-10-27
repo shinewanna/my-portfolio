@@ -11,9 +11,9 @@ class MyInfo {
       "I am a passionate software engineer with 7 years of experience building cross-platform applications. My primary expertise is in Flutter, along with native iOS and Android development, focusing on scalable architecture, performance optimization, and delivering high-quality production applications.\n\n"
       "I enjoy solving complex engineering problems and continuously improving my technical skills. In addition to professional experience, I have participated in international programming contests where our team achieved the 'First to Solve' award for problem E and secured 8th place overall. These experiences strengthened my analytical thinking, teamwork, and problem-solving abilities.";
   String aboutMe =
-      '''I'm a Mobile Engineer and develop Android, iOS and Web.''';
+      '''Senior Mobile Engineer specializing in Flutter, iOS, and Android — building fast, scalable, cross-platform apps with clean architecture and great user experiences.''';
   String getInTouch =
-      'You have an idea, I am here to turn your dream into real digital solution.';
+      'Have an idea? I\'m here to turn your vision into a real digital solution.';
   AcadamicDetail acadamicDetail = AcadamicDetail(
       name: 'University of Computer Studies, Yangon', degree: 'B.C.Sc');
   late List<Experience> exps;
@@ -67,7 +67,7 @@ class MyInfo {
           'Implemented YPB multiple layer custom QR and Green Image Detector with Python.',
           'Migrated OpenCV to utilize Green Image Detector in Flutter.',
           'Worked in agile development teams and managed tasks using Jira.',
-          'Create task and manage Jira.',
+          'Created and managed tasks in Jira across agile sprint cycles.',
           'Set up Continuous Integration/Continuous Deployment (CI/CD) pipelines, PlayStore, AppStore, Firebase, and GitHub actions.'
         ],
       ),
@@ -76,7 +76,7 @@ class MyInfo {
         place: 'Asaygo Company',
         fromTo: 'Aug 2019 - Apr 2022',
         bullets: [
-          'Flutter Developer (August 2019 - July 2021) | Senior Flutter Developer (August 2021 - April 2022)',
+          'Progressed from Flutter Developer (Aug 2019 – Jul 2021) to Senior Flutter Developer (Aug 2021 – Apr 2022).',
           'Developed various mobile applications using Flutter, including ChoChoLay Zay, ChoChoLay House, ChoChoLay Chat, and CMTFDN.',
           'Created and published the Multiselectable DropDown widget for Flutter Pub.',
           'Developed Android AutoStart Plugin using Flutter and Android Native (Java) and published it to Flutter Pub.',
@@ -303,7 +303,7 @@ class MyInfo {
         name: 'Share Notification',
         techStack: ['Flutter', 'Firebase', 'Cloud Functions'],
         bullets: [
-          'This highly popular app boasts an impressive user base of over 100k+ active users.',
+          'Highly popular app with 100k+ active users.',
           'Facilitates sharing notifications from both installed and system apps.',
           'Allows users to share notifications from social media platforms such as Messenger, Twitter, Instagram, TikTok, etc.',
           'Commonly used for business-related activities like banking notifications, messaging, and incoming call notifications.',
@@ -315,23 +315,13 @@ class MyInfo {
             'https://play.google.com/store/apps/details?id=com.share.notification',
       ),
       Project(
-        name: 'iTube: Video Downloader',
-        techStack: ['Flutter'],
-        bullets: [
-          'Popular Video Downloader app with a large user base.',
-          'Enables users to download videos and audios from platforms like YouTube, Facebook, Instagram, etc.'
-        ],
-        image:
-            'https://user-images.githubusercontent.com/39454969/151582760-2560e441-90db-4f06-a739-b42938110e13.png',
-        playStore:
-            'https://play.google.com/store/apps/details?id=com.swn.tube_downloader',
-      ),
-      Project(
         name: 'Second Space: Launcher',
         techStack: ['Android', 'Java'],
         bullets: [
-          'Offers a solution for hiding apps using the "second space" feature.',
-          'Provides a simple and smooth launcher experience for Android phones.'
+          'A custom Android launcher that creates an isolated, password-protected second user space entirely separate from the primary profile.',
+          'Users can install and run apps exclusively within the second space — invisible and inaccessible from the main profile — making it ideal for privacy, dual identities, or separating work and personal environments.',
+          'Built with Android Native (Java), leveraging Android\'s multi-user APIs to manage independent app sandboxes and session switching.',
+          'Features a clean, minimal launcher UI with app drawer, gesture navigation, and smooth transitions optimized for everyday use.',
         ],
         image:
             'https://user-images.githubusercontent.com/39454969/132946754-5e50cf3f-2be4-4bce-83d1-70547d00a163.png',
@@ -452,7 +442,7 @@ class MyInfo {
         name: 'Example Crypto App',
         techStack: ['Kotlin', 'Dagger-Hilt', 'Retrofit'],
         bullets: [
-          'The is a example app to decmonstrate my proficiency in building a sample app using Kotlin.',
+          'Demonstrates proficiency in building a production-quality Android app using Kotlin.',
           'Incorporated Dagger-Hilt for dependency injection.',
           'Integrated Retrofit for network requests.',
           'Followed Clean Architecture principles for better code organization and maintainability.'
@@ -460,10 +450,10 @@ class MyInfo {
         url: 'https://github.com/shinewanna/CryptoApp',
       ),
       Project(
-        name: 'Example Photo App(built two years ago)',
+        name: 'Example Photo App',
         techStack: ['Flutter', 'Hive', 'GetX', 'TDD'],
         bullets: [
-          'The is a example app to decmonstrate my proficiency in building a sample app using Flutter.',
+          'Demonstrates proficiency in building a production-quality Flutter app following TDD and clean architecture.',
           'Implemented features using Hive for local data storage.',
           'Utilized Test-Driven Development (TDD) for both widget and integration testing.',
           'Designed with the GetX Architecture for state management.'
@@ -475,7 +465,7 @@ class MyInfo {
         techStack: ['Flutter', 'Web'],
         bullets: [
           'Developed using Flutter',
-          'Supported and reposonsive for both Android, iOS and Web',
+          'Fully responsive across Android, iOS, and Web.',
         ],
         url: 'https://github.com/shinewanna/my-portfolio',
       ),
